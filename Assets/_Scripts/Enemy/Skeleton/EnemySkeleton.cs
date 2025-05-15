@@ -19,6 +19,8 @@ public class EnemySkeleton : Enemy
         attackState = new SkeletonAttackState(this, stateMachine, "Attack", this);
         stunnedState = new SkeletonStunnedState(this, stateMachine, "Stunned", this);
         deadState = new SkeletonDeadState(this, stateMachine, "Idle", this);
+
+        SetupDefaultFacingDir(-1);
     }
 
     protected override void Start()

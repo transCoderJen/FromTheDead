@@ -13,6 +13,7 @@ public class SkeletonAttackState : EnemyState
     public override void Enter()
     {
         base.Enter();
+        stateName = "ATtack";
     }
 
     public override void Exit()

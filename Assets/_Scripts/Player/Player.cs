@@ -5,16 +5,19 @@ using UnityEngine;
 
 public class Player : Entity
 {
-    #region Debugging
-    [Header("Debugging")]
-    [SerializeField] private TextMeshProUGUI debugStateText;
-    #endregion
+    [Header("Materials")]
+    public Material idleMat;
+    public Material attack1Mat;
+    public Material attack2Mat;
+    public Material attack3Mat;
+    public Material respawnHolyMat;
 
     [Header("Attack Details")]
     public Vector2[] attackMovement;
     public float counterAttackDuration;
 
     [Header("Move Info")]
+    public Transform respawnPosition;
     public float moveSpeed = 8f;
     public float jumpForce;
     public int jumpCount = 0;
@@ -29,7 +32,6 @@ public class Player : Entity
     public float dashDir { get; private set;}
     private float defaultDashSpeed;
 
-
     #region Player State Machine
     public PlayerStateMachine stateMachine { get; private set; } 
     public PlayerIdleState idleState { get; private set; }
@@ -38,9 +40,10 @@ public class Player : Entity
     public PlayerJumpState jumpState { get; private set; }
     public PlayerDashState dashState { get; private set; }
     public PlayerPrimaryAttackState primaryAttack { get; private set; }
+    public PlayerRespawnHolyState respawnHolyState { get; private set; }
     #endregion
 
-    [HideInInspector] public bool nextAttackQueued = false; // Flag to store input for the next attack
+    [HideInInspector]public bool nextAttackQueued = false; // Flag to store input for the next attack
     public bool isBusy { get; private set; }
     public PlayerFX fx { get; private set; }
     protected override void Awake()
@@ -53,6 +56,7 @@ public class Player : Entity
         fallState = new PlayerFallState(this, stateMachine, "jump");
         jumpState = new PlayerJumpState(this, stateMachine, "jump");
         dashState = new PlayerDashState(this, stateMachine, "dash");
+        respawnHolyState = new PlayerRespawnHolyState(this, stateMachine, "respawnHoly");
 
 
         primaryAttack= new PlayerPrimaryAttackState(this, stateMachine, "attack");
@@ -61,7 +65,7 @@ public class Player : Entity
     protected override void Start()
     {
         base.Start();
-        stateMachine.Initialize(idleState);
+        stateMachine.Initialize(respawnHolyState);
 
         defaultMoveSpeed = moveSpeed;
         defaultJumpForce = jumpForce;

@@ -18,6 +18,7 @@ public class SkeletonDeadState : EnemyState
         enemy.cd.enabled = false;
 
         stateTimer = .1f;
+        stateName = "Dead";
     }
 
     public override void Exit()

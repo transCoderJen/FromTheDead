@@ -16,10 +16,19 @@ public class PlayerPrimaryAttackState : PlayerState
         base.Enter();
 
         xInput = 0;
+
         
+
         if (comboCounter > 2 || Time.time >= lastTimeAttaked + comboWindow)
             comboCounter = 0;
         
+        if (comboCounter == 0)
+            player.sr.material = player.attack1Mat;
+        else if (comboCounter == 1)
+            player.sr.material = player.attack2Mat;
+        else if (comboCounter == 2)
+            player.sr.material = player.attack3Mat;
+            
         player.anim.SetInteger("ComboCounter", comboCounter);
         stateName = "Attack" + comboCounter;
 

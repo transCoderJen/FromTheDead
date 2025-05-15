@@ -1,12 +1,18 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
+     #region Debugging
+    [Header("Debugging")]
+    public TextMeshProUGUI debugStateText;
+    #endregion
+
     #region Components
     public Animator anim { get; private set; }
     public Rigidbody2D rb {get; private set; }
-    public SpriteRenderer sr { get; private set; }
+    public SpriteRenderer sr { get; private set; } 
     public CharacterStats stats { get; private set; }
     public CapsuleCollider2D cd { get; private set; }
     #endregion
@@ -21,6 +27,8 @@ public class Entity : MonoBehaviour
     [Header("Collision Info")]
     public Transform attackCheck;
     public float attackCheckRadius;
+    public Transform attackCheck2;
+    public float attackCheckRadius2;
     [SerializeField] protected Transform groundCheck;
     [SerializeField] protected float groundCheckDistance;
     [SerializeField] protected Transform wallCheck;
@@ -41,14 +49,22 @@ public class Entity : MonoBehaviour
         sr = GetComponentInChildren<SpriteRenderer>();
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        stats = GetComponent<CharacterStats>();
         cd = GetComponent<CapsuleCollider2D>();
     }
 
     public virtual void SlowEntityBy(float _slowPercentage, float _slowDuration)
     {
-
+        StartCoroutine(SlowEntity(_slowPercentage, _slowDuration));
     }
 
+    public IEnumerator SlowEntity(float _slowPercentage, float _slowDuration)
+    {
+        anim.speed = 1 - _slowPercentage;
+        yield return new WaitForSeconds(_slowDuration);
+        ReturnDefaultSpeed();
+    }
+    
     protected virtual void ReturnDefaultSpeed()
     {
         anim.speed = 1;
@@ -106,6 +122,8 @@ public class Entity : MonoBehaviour
         Gizmos.DrawLine(groundCheck.position, new Vector3(groundCheck.position.x, groundCheck.position.y - groundCheckDistance));
         Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDistance * facingDir, wallCheck.position.y));
         Gizmos.DrawWireSphere(attackCheck.position, attackCheckRadius);
+        if (attackCheck2 != null)
+            Gizmos.DrawWireSphere(attackCheck2.position, attackCheckRadius2);
     }
     #endregion
 

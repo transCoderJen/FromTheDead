@@ -17,6 +17,7 @@ public class SkeletonBattleState : EnemyState
             stateMachine.ChangeState(enemy.moveState);
         base.Enter();
         player = PlayerManager.Instance.player.transform;
+        stateName = "Battle";
     }
 
     public override void Exit()

@@ -43,6 +43,9 @@ public class PlayerState
         yInput = Input.GetAxisRaw("Vertical");
 
         player.anim.SetFloat("yVelocity", rb.linearVelocity.y);
+
+        if (Input.GetKeyDown(KeyCode.Mouse2))
+            stateMachine.ChangeState(player.respawnHolyState);
     }
 
     public virtual void FixedUpdate() {

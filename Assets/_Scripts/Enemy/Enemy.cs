@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// [RequireComponent(typeof(Rigidbody2D))]
-// [RequireComponent(typeof(CapsuleCollider2D))]
-// [RequireComponent(typeof(EnemyStats))]
-// [RequireComponent(typeof(EntityFX))]
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(CapsuleCollider2D))]
+[RequireComponent(typeof(EnemyStats))]
+[RequireComponent(typeof(EntityFX))]
 // [RequireComponent(typeof(ItemDrop))]
 
 public class Enemy : Entity
@@ -54,8 +54,12 @@ public class Enemy : Entity
     {            
         base.Update();
         stateMachine.currentState.Update();
+        
+        UpdateStateText();
+
         if (transform.position.y < -20)
             Destroy(this.gameObject);
+
     }
 
     public override void DamageEffect(bool _knockback)
@@ -143,6 +147,13 @@ public class Enemy : Entity
         
         Gizmos.color = Color.yellow;
 
-        Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + attackDistance, transform.position.y));
+        Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + attackDistance * facingDir, transform.position.y));
+    }
+
+    private void UpdateStateText()
+    {
+        debugStateText.text = stateMachine.currentStateName;
+
+        debugStateText.GetComponent<Transform>().position = transform.position + new Vector3(0, 2, 0);
     }
 }

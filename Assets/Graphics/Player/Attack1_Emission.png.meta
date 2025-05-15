@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d76a47585ee3bcf4da3d33c879999b39
+guid: ac5726512fac9af4a9d507623fde6d46
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4539847177181812834
-    second: tearr-Sheet_emssion_0
+      213: 2950219761194611227
+    second: Attack1_Emission_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tearr-Sheet_emssion_0
+      name: Attack1_Emission_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 512
+        width: 768
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2685b7a54f6c00f30800000000000000
-      internalID: 4539847177181812834
+      spriteID: b12b75bed3941f820800000000000000
+      internalID: 2950219761194611227
       vertices: []
       indices: 
       edges: []

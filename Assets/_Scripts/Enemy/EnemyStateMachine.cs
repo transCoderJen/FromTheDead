@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyStateMachine
 {
     public EnemyState currentState { get; private set; }
+    public string currentStateName { get { return currentState?.stateName; } } // Store the name if needed
 
     public void Initialize(EnemyState _startState)
     {

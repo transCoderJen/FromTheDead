@@ -15,6 +15,7 @@ public class SkeletonStunnedState : EnemyState
         stateTimer = enemy.stunDuration;
         enemy.SetVelocity(-enemy.facingDir * enemy.stunDirection.x, enemy.stunDirection.y);
         enemy.Flip();
+        stateName = "Stunned";
     }
 
     public override void Exit()

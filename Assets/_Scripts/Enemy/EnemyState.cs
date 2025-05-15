@@ -11,6 +11,7 @@ public class EnemyState
     private string animBoolName;
     protected float stateTimer;
     protected bool triggerCalled;
+    public string stateName;
 
     public EnemyState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName)
     {

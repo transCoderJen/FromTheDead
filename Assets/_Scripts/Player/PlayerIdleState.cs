@@ -9,6 +9,7 @@ public class PlayerIdleState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
+        player.sr.material = player.idleMat;
 
         stateName = "Idle";
         if (stateMachine.previousStateName == "Dash")

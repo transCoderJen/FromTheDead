@@ -12,6 +12,7 @@ public class SkeletonIdleState : SkeletonGroundedState
 
         stateTimer = enemy.idleTime;    
         enemy.GetComponentInChildren<SpriteRenderer>().color = Color.white;
+        stateName = "Idle";
     }
 
     public override void Exit()

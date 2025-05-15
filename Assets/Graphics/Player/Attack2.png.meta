@@ -1,31 +1,28 @@
 fileFormatVersion: 2
-guid: d8ec163686dae0149a7f13f42e7f9c4c
+guid: 5cc632dffebc0424a9f68b5b5d95476c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8228543995050594843
-    second: tearr-Sheet_0
+      213: -3236675104909177313
+    second: Attack3_0
   - first:
-      213: 3597799645132004138
-    second: tearr-Sheet_1
+      213: -6048392498854522608
+    second: Attack3_1
   - first:
-      213: 4918301409031820352
-    second: tearr-Sheet_2
+      213: 4769638531270534136
+    second: Attack3_2
   - first:
-      213: -2415738632078741267
-    second: tearr-Sheet_3
+      213: -4825729793490337222
+    second: Attack3_3
   - first:
-      213: 5010160755459462114
-    second: tearr-Sheet_4
+      213: 710405504474814621
+    second: Attack3_4
   - first:
-      213: 6718760270429937579
-    second: tearr-Sheet_5
+      213: -1658806294426973400
+    second: Attack3_5
   - first:
-      213: 56326545260010429
-    second: tearr-Sheet_6
-  - first:
-      213: 1983713153118591114
-    second: tearr-Sheet_7
+      213: -985871239997422432
+    second: Attack3_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -96,7 +93,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -134,177 +131,155 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tearr-Sheet_0
+      name: Attack3_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 4
-        width: 50
-        height: 50
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b121aa3ba29a13270800000000000000
-      internalID: 8228543995050594843
+      spriteID: 0132bdc2505b95349bfeff47acdcdef5
+      internalID: 1280770818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tearr-Sheet_1
+      name: Attack3_1
       rect:
         serializedVersion: 2
-        x: 68
-        y: 4
-        width: 50
-        height: 50
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a2b9e1d17b3fde130800000000000000
-      internalID: 3597799645132004138
+      spriteID: 31e94339dfce3bd4d9ee0729af0c78b4
+      internalID: -1320517271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tearr-Sheet_2
+      name: Attack3_2
       rect:
         serializedVersion: 2
-        x: 132
-        y: 4
-        width: 50
-        height: 49
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 04415afb211514440800000000000000
-      internalID: 4918301409031820352
+      spriteID: 7c02a05035e52234bba88b7ad36490aa
+      internalID: -202069046
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tearr-Sheet_3
+      name: Attack3_3
       rect:
         serializedVersion: 2
-        x: 196
-        y: 4
-        width: 50
-        height: 49
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: de032c46382997ed0800000000000000
-      internalID: -2415738632078741267
+      spriteID: cf812b5e0331f4f45b4b3241b3aed5e9
+      internalID: -1386508130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tearr-Sheet_4
+      name: Attack3_4
       rect:
         serializedVersion: 2
-        x: 260
-        y: 4
-        width: 50
-        height: 48
+        x: 256
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2e393c089aaa78540800000000000000
-      internalID: 5010160755459462114
+      spriteID: 652f8e03db8e1524ea2638ff645bf6ab
+      internalID: 1094737491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tearr-Sheet_5
+      name: Attack3_5
       rect:
         serializedVersion: 2
-        x: 324
-        y: 4
-        width: 50
-        height: 48
+        x: 320
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bafdbf15ed4dd3d50800000000000000
-      internalID: 6718760270429937579
+      spriteID: 914a697906048b048947ddeb1ae2f6d2
+      internalID: 2127221252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tearr-Sheet_6
+      name: Attack3_6
       rect:
         serializedVersion: 2
-        x: 388
-        y: 4
-        width: 50
-        height: 49
+        x: 384
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dbbd5a9c1bc18c000800000000000000
-      internalID: 56326545260010429
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tearr-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 452
-        y: 4
-        width: 50
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a8857e34a90978b10800000000000000
-      internalID: 1983713153118591114
+      spriteID: 3b5d6612c3a641f4db30a05aa5a654a5
+      internalID: -832226768
       vertices: []
       indices: 
       edges: []
@@ -313,7 +288,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 34bf744a6a364bd4dbaae3cf44e6ebaa
     internalID: 0
     vertices: []
     indices: 
@@ -323,14 +298,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tearr-Sheet_0: 8228543995050594843
-      tearr-Sheet_1: 3597799645132004138
-      tearr-Sheet_2: 4918301409031820352
-      tearr-Sheet_3: -2415738632078741267
-      tearr-Sheet_4: 5010160755459462114
-      tearr-Sheet_5: 6718760270429937579
-      tearr-Sheet_6: 56326545260010429
-      tearr-Sheet_7: 1983713153118591114
+      Attack3_0: 1280770818
+      Attack3_1: -1320517271
+      Attack3_2: -202069046
+      Attack3_3: -1386508130
+      Attack3_4: 1094737491
+      Attack3_5: 2127221252
+      Attack3_6: -832226768
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -7,6 +7,7 @@ public class SkeletonMoveState : SkeletonGroundedState
     public override void Enter()
     {
         base.Enter();
+        stateName = "Move";
     }
 
     public override void Exit()

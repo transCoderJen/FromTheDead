@@ -32,7 +32,6 @@ public class PlayerGroundedState : PlayerState
         
         if (Input.GetKeyDown(KeyCode.Mouse0))
             stateMachine.ChangeState(player.primaryAttack);
-
     }
     public override void FixedUpdate()
     {

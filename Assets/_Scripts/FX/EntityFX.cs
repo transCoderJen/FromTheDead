@@ -170,7 +170,7 @@ public class EntityFX : MonoBehaviour
 
     public void CreateHitFx(Transform _target)
     {
-        float zRotation = Random.Range(-90, 90);
+        float zRotation = Random.Range(-30, 30);
         float xPosition = Random.Range(-.5f, .5f);
         float yPosition = Random.Range(-.5f, .5f);
 

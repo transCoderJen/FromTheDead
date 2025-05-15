@@ -19,7 +19,7 @@ public class EnemyAnimationTriggers : MonoBehaviour
         {
             if (hit.GetComponent<Player>() != null)
             {
-                //TODO enemy.stats.DoDamage(hit.GetComponent<Player>().stats, false);
+                enemy.stats.DoDamage(hit.GetComponent<Player>().stats, true);
             }
         }
     }
