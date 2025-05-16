@@ -11,6 +11,7 @@ public class EnemyState
     private string animBoolName;
     protected float stateTimer;
     protected bool triggerCalled;
+    protected bool projecticleTriggerCalled;
     public string stateName;
 
     public EnemyState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName)
@@ -25,6 +26,7 @@ public class EnemyState
         enemyBase.anim.SetBool(animBoolName, true);
         rb = enemyBase.rb;
         triggerCalled = false;
+        projecticleTriggerCalled = false;
     }
 
     public virtual void Update()
@@ -41,5 +43,10 @@ public class EnemyState
     public virtual void AnimationFinishedTrigger()
     {
         triggerCalled = true;
+    }
+
+    public virtual void projecticleTrigger()
+    {
+        projecticleTriggerCalled = true;
     }
 }

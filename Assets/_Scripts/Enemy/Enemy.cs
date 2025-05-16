@@ -138,6 +138,7 @@ public class Enemy : Entity
     }
 
     public void AnimationTrigger() => stateMachine.currentState.AnimationFinishedTrigger();
+    public void ProjectileTrigger() => stateMachine.currentState.projecticleTrigger();
 
     public virtual RaycastHit2D isPlayerDetected() => Physics2D.Raycast(wallCheck.position, Vector2.right * facingDir,  50, whatIsPlayer);
 

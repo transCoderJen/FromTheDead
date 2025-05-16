@@ -6,10 +6,8 @@ public class EnemyAnimationTriggers : MonoBehaviour
 {
     private Enemy enemy => GetComponentInParent<Enemy>();
 
-    private void AnimationTrigger()
-    {
-        enemy.AnimationTrigger();
-    }
+    private void AnimationTrigger() { enemy.AnimationTrigger(); }
+    private void ProjectileTrigger() { enemy.ProjectileTrigger(); }
 
     private void AttackTrigger()
     {
@@ -23,8 +21,6 @@ public class EnemyAnimationTriggers : MonoBehaviour
             }
         }
     }
-
-
 
     private void OpenCounterWindow() => enemy.OpenCounterAttackWindow();
     private void CloseCounterWindow() => enemy.CloseCounterAttackWindow();
