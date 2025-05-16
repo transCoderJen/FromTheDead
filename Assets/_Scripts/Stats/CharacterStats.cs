@@ -165,10 +165,11 @@ public class CharacterStats : MonoBehaviour
         if (CanCrit())
         {
             totalDamage = CalculateCriticalDamage(totalDamage);
-            // fx.CreateCritHitFx(_targetStats.transform, entity.facingDir);
+            fx.CreateCritHitFx(_targetStats.transform, entity.facingDir);
         }
 
         fx.CreateHitFx(_targetStats.transform);
+
 
         totalDamage = CheckTargetArmor(_targetStats, totalDamage);
         _targetStats.TakeDamage(totalDamage, _knockback);
@@ -182,6 +183,9 @@ public class CharacterStats : MonoBehaviour
 
     public virtual void TakeDamage(int _damage, bool _knockback)
     {
+        StartCoroutine(ImpactEffectCoroutine()); 
+        
+
         if (isInvincible)
             return;
         GetComponent<Entity>().DamageEffect(_knockback);
@@ -189,6 +193,13 @@ public class CharacterStats : MonoBehaviour
 
         if (currentHealth <= 0 && !isDead)
             Die();
+    }
+
+    private IEnumerator ImpactEffectCoroutine()
+    {
+        Time.timeScale = .1f;
+        yield return new WaitForSecondsRealtime(.1f);
+        Time.timeScale = 1f;
     }
 
     public virtual void IncreaseHealthBy(int _amount)

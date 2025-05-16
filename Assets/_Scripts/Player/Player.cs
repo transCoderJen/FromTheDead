@@ -11,6 +11,7 @@ public class Player : Entity
     public Material attack2Mat;
     public Material attack3Mat;
     public Material respawnHolyMat;
+    public Material dashMat;
 
     [Header("Attack Details")]
     public Vector2[] attackMovement;
@@ -41,6 +42,7 @@ public class Player : Entity
     public PlayerDashState dashState { get; private set; }
     public PlayerPrimaryAttackState primaryAttack { get; private set; }
     public PlayerRespawnHolyState respawnHolyState { get; private set; }
+    public PlayerCounterAttackState counterAttack { get; private set; }
     #endregion
 
     [HideInInspector]public bool nextAttackQueued = false; // Flag to store input for the next attack
@@ -51,15 +53,17 @@ public class Player : Entity
         base.Awake();
 
         stateMachine = new PlayerStateMachine();
+
         idleState = new PlayerIdleState(this, stateMachine, "idle");
         walkState = new PlayerWalkState(this, stateMachine, "walk");
         fallState = new PlayerFallState(this, stateMachine, "jump");
         jumpState = new PlayerJumpState(this, stateMachine, "jump");
         dashState = new PlayerDashState(this, stateMachine, "dash");
+        
         respawnHolyState = new PlayerRespawnHolyState(this, stateMachine, "respawnHoly");
 
-
         primaryAttack= new PlayerPrimaryAttackState(this, stateMachine, "attack");
+        counterAttack = new PlayerCounterAttackState(this, stateMachine, "counter");
     }
 
     protected override void Start()

@@ -1,9 +1,19 @@
 using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class PlayerFX : EntityFX
 {
+    [Header("Vignette FX")]
+    [SerializeField] private Volume volume;
+    [SerializeField] private float maxIntensity;
+    [SerializeField] private float flashSpeed;
+    [SerializeField] private Vignette vignette;
+
+    [SerializeField] private float currentVignetteIntensity;
+    
     [Header("Screen Shake FX")]
     [SerializeField] private float shakeMultiplier;
     public Vector3 lightShakePower;
@@ -22,6 +32,33 @@ public class PlayerFX : EntityFX
         base.Start();
         screenShake = GetComponent<CinemachineImpulseSource>();
         player = PlayerManager.Instance.player;
+        if (volume.profile.TryGet(out vignette))
+        {
+            Debug.Log("Vignette found");
+            vignette.intensity.Override(0f);
+        }
+    }
+
+    public void FlashVignette()
+    {
+        if (vignette != null)
+        {
+            LeanTween.value(gameObject, 0f, maxIntensity, flashSpeed)
+                .setOnUpdate((float value) =>
+                {
+                    vignette.intensity.Override(value);
+                    currentVignetteIntensity = value;
+                })
+                .setOnComplete(() =>
+                {
+                    LeanTween.value(gameObject, currentVignetteIntensity, 0f, flashSpeed)
+                        .setOnUpdate((float value) =>
+                        {
+                            vignette.intensity.Override(value);
+                            currentVignetteIntensity = value;
+                        });
+                });
+        }
     }
 
     public void ScreenShake(Vector3 _shakePower)

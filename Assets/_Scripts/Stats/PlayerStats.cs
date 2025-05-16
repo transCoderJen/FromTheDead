@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class PlayerStats : CharacterStats
@@ -15,6 +16,7 @@ public class PlayerStats : CharacterStats
 
     public override void TakeDamage(int _damage, bool _knockback = false)
     {
+        player.fx.FlashVignette();
         if (_damage >= player.stats.GetMaxHealthValue() * .3f)
             _knockback = true;
 

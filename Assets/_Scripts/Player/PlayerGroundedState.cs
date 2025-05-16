@@ -22,12 +22,12 @@ public class PlayerGroundedState : PlayerState
         if (Input.GetKeyDown(KeyCode.Space))
         {
             stateMachine.ChangeState(player.jumpState);
-            //TODO player.fx.CreateDustParticles(DustParticleType.Jump)
+            // player.fx.CreateDustParticles(DustParticleType.Jump);
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-                player.fx.ScreenShake(player.fx.lightShakePower);
+            stateMachine.ChangeState(player.counterAttack);
         }
         
         if (Input.GetKeyDown(KeyCode.Mouse0))

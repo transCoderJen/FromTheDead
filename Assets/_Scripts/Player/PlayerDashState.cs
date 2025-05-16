@@ -35,8 +35,9 @@ public class PlayerDashState : PlayerState
         //TODO player.stats.MakeInvincible(true); // Make the player invincible during the dash
 
         // Create dust particles if the player is on the ground
-        
 
+        player.sr.material = player.dashMat; // Change the player's material to the dash material
+        
         if (player.IsGroundDetected())
             player.fx.CreateDustParticles(DustParticleType.Running);
 

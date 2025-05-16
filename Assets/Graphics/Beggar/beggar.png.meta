@@ -1,0 +1,1350 @@
+fileFormatVersion: 2
+guid: 1fa9baecbed56ed44ab700e6d32af7f1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1986155303458387447
+    second: beggar_idle-Sheet-imageonline.co-merged_0
+  - first:
+      213: -3814026297594683030
+    second: beggar_idle-Sheet-imageonline.co-merged_1
+  - first:
+      213: 3251184847451545816
+    second: beggar_idle-Sheet-imageonline.co-merged_2
+  - first:
+      213: 3061745580691628993
+    second: beggar_idle-Sheet-imageonline.co-merged_3
+  - first:
+      213: 5527248482410029230
+    second: beggar_idle-Sheet-imageonline.co-merged_4
+  - first:
+      213: -6312517393929731020
+    second: beggar_idle-Sheet-imageonline.co-merged_5
+  - first:
+      213: 5222021436728845178
+    second: beggar_idle-Sheet-imageonline.co-merged_6
+  - first:
+      213: 3649620208387315581
+    second: beggar_idle-Sheet-imageonline.co-merged_7
+  - first:
+      213: 2895123624910594382
+    second: beggar_idle-Sheet-imageonline.co-merged_8
+  - first:
+      213: -1940833746043469810
+    second: beggar_idle-Sheet-imageonline.co-merged_9
+  - first:
+      213: -4557774327736132535
+    second: beggar_idle-Sheet-imageonline.co-merged_10
+  - first:
+      213: -2569223977444600103
+    second: beggar_idle-Sheet-imageonline.co-merged_11
+  - first:
+      213: -1844931359267967938
+    second: beggar_idle-Sheet-imageonline.co-merged_12
+  - first:
+      213: -5372906833707977250
+    second: beggar_idle-Sheet-imageonline.co-merged_13
+  - first:
+      213: -1922492077201588220
+    second: beggar_idle-Sheet-imageonline.co-merged_14
+  - first:
+      213: 2386826272797474295
+    second: beggar_idle-Sheet-imageonline.co-merged_15
+  - first:
+      213: -8596291342975130460
+    second: beggar_idle-Sheet-imageonline.co-merged_16
+  - first:
+      213: -6873425790029807056
+    second: beggar_idle-Sheet-imageonline.co-merged_17
+  - first:
+      213: -939041848562065043
+    second: beggar_idle-Sheet-imageonline.co-merged_18
+  - first:
+      213: -8389174916000462348
+    second: beggar_idle-Sheet-imageonline.co-merged_19
+  - first:
+      213: -1517583089936501347
+    second: beggar_idle-Sheet-imageonline.co-merged_20
+  - first:
+      213: -6866665030430406164
+    second: beggar_idle-Sheet-imageonline.co-merged_21
+  - first:
+      213: 2050270873500238546
+    second: beggar_idle-Sheet-imageonline.co-merged_22
+  - first:
+      213: 1451226899030882910
+    second: beggar_idle-Sheet-imageonline.co-merged_23
+  - first:
+      213: 8720097650512891360
+    second: beggar_idle-Sheet-imageonline.co-merged_24
+  - first:
+      213: 2305043244089791841
+    second: beggar_idle-Sheet-imageonline.co-merged_25
+  - first:
+      213: -5844927183450591979
+    second: beggar_idle-Sheet-imageonline.co-merged_26
+  - first:
+      213: -5726581212981065849
+    second: beggar_idle-Sheet-imageonline.co-merged_27
+  - first:
+      213: 424159454501042238
+    second: beggar_idle-Sheet-imageonline.co-merged_28
+  - first:
+      213: 2868131471105125643
+    second: beggar_idle-Sheet-imageonline.co-merged_29
+  - first:
+      213: -7389906192474394874
+    second: beggar_idle-Sheet-imageonline.co-merged_30
+  - first:
+      213: 2270989660724765875
+    second: beggar_idle-Sheet-imageonline.co-merged_31
+  - first:
+      213: -8206604246721034129
+    second: beggar_idle-Sheet-imageonline.co-merged_32
+  - first:
+      213: 887473960122033199
+    second: beggar_idle-Sheet-imageonline.co-merged_33
+  - first:
+      213: 6991430624535705209
+    second: beggar_idle-Sheet-imageonline.co-merged_34
+  - first:
+      213: 131232449417545173
+    second: beggar_idle-Sheet-imageonline.co-merged_35
+  - first:
+      213: 7875256875679169528
+    second: beggar_idle-Sheet-imageonline.co-merged_36
+  - first:
+      213: 8632775044495523543
+    second: beggar_idle-Sheet-imageonline.co-merged_37
+  - first:
+      213: -7268609287494744865
+    second: beggar_idle-Sheet-imageonline.co-merged_38
+  - first:
+      213: 1338222391541236512
+    second: beggar_idle-Sheet-imageonline.co-merged_39
+  - first:
+      213: -4423155108794035721
+    second: beggar_idle-Sheet-imageonline.co-merged_40
+  - first:
+      213: -7444141889649195668
+    second: beggar_idle-Sheet-imageonline.co-merged_41
+  - first:
+      213: -3010948753781397082
+    second: beggar_idle-Sheet-imageonline.co-merged_42
+  - first:
+      213: 1702860523503406727
+    second: beggar_idle-Sheet-imageonline.co-merged_43
+  - first:
+      213: -1103662397781725188
+    second: beggar_idle-Sheet-imageonline.co-merged_44
+  - first:
+      213: -3580040765608672902
+    second: beggar_idle-Sheet-imageonline.co-merged_45
+  - first:
+      213: -3911311803612523709
+    second: beggar_idle-Sheet-imageonline.co-merged_46
+  - first:
+      213: -5306668582473082180
+    second: beggar_idle-Sheet-imageonline.co-merged_47
+  - first:
+      213: 4120847056594757863
+    second: beggar_idle-Sheet-imageonline.co-merged_48
+  - first:
+      213: 5113616455538473553
+    second: beggar_idle-Sheet-imageonline.co-merged_49
+  - first:
+      213: -8828341034855802934
+    second: beggar_idle-Sheet-imageonline.co-merged_50
+  - first:
+      213: 5594696506673750943
+    second: beggar_idle-Sheet-imageonline.co-merged_51
+  - first:
+      213: 9141835392793671295
+    second: beggar_idle-Sheet-imageonline.co-merged_52
+  - first:
+      213: 7392224646798854983
+    second: beggar_idle-Sheet-imageonline.co-merged_53
+  - first:
+      213: -9145823468645953764
+    second: beggar_idle-Sheet-imageonline.co-merged_54
+  - first:
+      213: 4965552380328131613
+    second: beggar_idle-Sheet-imageonline.co-merged_55
+  - first:
+      213: 6129809435405515909
+    second: beggar_idle-Sheet-imageonline.co-merged_56
+  - first:
+      213: -8646569657863309741
+    second: beggar_idle-Sheet-imageonline.co-merged_57
+  - first:
+      213: -6130137090521751572
+    second: beggar_idle-Sheet-imageonline.co-merged_58
+  - first:
+      213: -6439714774215778156
+    second: beggar_idle-Sheet-imageonline.co-merged_59
+  - first:
+      213: -6346638631521079811
+    second: beggar_idle-Sheet-imageonline.co-merged_60
+  - first:
+      213: -6020869338758095598
+    second: beggar_idle-Sheet-imageonline.co-merged_61
+  - first:
+      213: -3573022453493905010
+    second: beggar_idle-Sheet-imageonline.co-merged_62
+  - first:
+      213: 7831161964957587410
+    second: beggar_idle-Sheet-imageonline.co-merged_63
+  - first:
+      213: -8602203859606720347
+    second: beggar_idle-Sheet-imageonline.co-merged_64
+  - first:
+      213: 2620634898651328847
+    second: beggar_idle-Sheet-imageonline.co-merged_65
+  - first:
+      213: 288749139552161619
+    second: beggar_idle-Sheet-imageonline.co-merged_66
+  - first:
+      213: -2092400796006838882
+    second: beggar_idle-Sheet-imageonline.co-merged_67
+  - first:
+      213: 3288200744881852215
+    second: beggar_idle-Sheet-imageonline.co-merged_68
+  - first:
+      213: -2594262480972741820
+    second: beggar_idle-Sheet-imageonline.co-merged_69
+  - first:
+      213: 1296120364495987238
+    second: beggar_idle-Sheet-imageonline.co-merged_70
+  - first:
+      213: -6366620578772703954
+    second: beggar_idle-Sheet-imageonline.co-merged_71
+  - first:
+      213: 5415765841956429858
+    second: beggar_idle-Sheet-imageonline.co-merged_72
+  - first:
+      213: 7767801873882218444
+    second: beggar_idle-Sheet-imageonline.co-merged_73
+  - first:
+      213: 3587909360259741925
+    second: beggar_idle-Sheet-imageonline.co-merged_74
+  - first:
+      213: -513276833405434318
+    second: beggar_idle-Sheet-imageonline.co-merged_75
+  - first:
+      213: 4386674764755943584
+    second: beggar_idle-Sheet-imageonline.co-merged_76
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90aca9c4642cf64e0800000000000000
+      internalID: -1986155303458387447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a61eed73a4bd11bc0800000000000000
+      internalID: -3814026297594683030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d06b7ba4678e1d20800000000000000
+      internalID: 3251184847451545816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c32fb142618d7a20800000000000000
+      internalID: 3061745580691628993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea0ed5bc53bb4bc40800000000000000
+      internalID: 5527248482410029230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 434085810ee6568a0800000000000000
+      internalID: -6312517393929731020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a73a2b944d8587840800000000000000
+      internalID: 5222021436728845178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7753063e3e06a230800000000000000
+      internalID: 3649620208387315581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4123ab099b8d2820800000000000000
+      internalID: 2895123624910594382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e000dfeadf5c015e0800000000000000
+      internalID: -1940833746043469810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94c94e4a5688fb0c0800000000000000
+      internalID: -4557774327736132535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d69ff3a768485cd0800000000000000
+      internalID: -2569223977444600103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3caadf14bc7566e0800000000000000
+      internalID: -1844931359267967938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed5319d93b99f65b0800000000000000
+      internalID: -5372906833707977250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40085ee34afe155e0800000000000000
+      internalID: -1922492077201588220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fdb9a269d5bf1120800000000000000
+      internalID: 2386826272797474295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a4a3349196d3b880800000000000000
+      internalID: -8596291342975130460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_17
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 032c34339afac90a0800000000000000
+      internalID: -6873425790029807056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_18
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d616b3bf96ad7f2f0800000000000000
+      internalID: -939041848562065043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_19
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f9cc259cd9a39b80800000000000000
+      internalID: -8389174916000462348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_20
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d95f13f583670fae0800000000000000
+      internalID: -1517583089936501347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_21
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce949953984b4b0a0800000000000000
+      internalID: -6866665030430406164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_22
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d2cf442f76047c10800000000000000
+      internalID: 2050270873500238546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_23
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5a3a3dfc2bc32410800000000000000
+      internalID: 1451226899030882910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_24
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ed0a81bc92040970800000000000000
+      internalID: 8720097650512891360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_25
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 165d2eb2e982dff10800000000000000
+      internalID: 2305043244089791841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_26
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51d2764c1b5a2eea0800000000000000
+      internalID: -5844927183450591979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_27
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78786de3ab81780b0800000000000000
+      internalID: -5726581212981065849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_28
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3878adc6cae2e500800000000000000
+      internalID: 424159454501042238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_29
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0de6508066adc720800000000000000
+      internalID: 2868131471105125643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_30
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60faa1aa877c17990800000000000000
+      internalID: -7389906192474394874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_31
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b4a510701d248f10800000000000000
+      internalID: 2270989660724765875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_32
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f680bf50be84c1e80800000000000000
+      internalID: -8206604246721034129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_33
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f24ab7c5dd0f05c00800000000000000
+      internalID: 887473960122033199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_34
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 976fc3f5c1d860160800000000000000
+      internalID: 6991430624535705209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d5898aa73b32d100800000000000000
+      internalID: 131232449417545173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_36
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fb3fcd47688a4d60800000000000000
+      internalID: 7875256875679169528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_37
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7de33012a27cdc770800000000000000
+      internalID: 8632775044495523543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_38
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd445cf1d56b02b90800000000000000
+      internalID: -7268609287494744865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_39
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0230a46cc22529210800000000000000
+      internalID: 1338222391541236512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_40
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f190e90ddbcd92c0800000000000000
+      internalID: -4423155108794035721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_41
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c65cad1646811b890800000000000000
+      internalID: -7444141889649195668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beggar_idle-Sheet-imageonline.co-merged_42
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a964f5af06f636d0800000000000000
+      internalID: -3010948753781397082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 25d3990a98f9b88458850c7282aed9d8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      beggar_idle-Sheet-imageonline.co-merged_0: -1986155303458387447
+      beggar_idle-Sheet-imageonline.co-merged_1: -3814026297594683030
+      beggar_idle-Sheet-imageonline.co-merged_10: -4557774327736132535
+      beggar_idle-Sheet-imageonline.co-merged_11: -2569223977444600103
+      beggar_idle-Sheet-imageonline.co-merged_12: -1844931359267967938
+      beggar_idle-Sheet-imageonline.co-merged_13: -5372906833707977250
+      beggar_idle-Sheet-imageonline.co-merged_14: -1922492077201588220
+      beggar_idle-Sheet-imageonline.co-merged_15: 2386826272797474295
+      beggar_idle-Sheet-imageonline.co-merged_16: -8596291342975130460
+      beggar_idle-Sheet-imageonline.co-merged_17: -6873425790029807056
+      beggar_idle-Sheet-imageonline.co-merged_18: -939041848562065043
+      beggar_idle-Sheet-imageonline.co-merged_19: -8389174916000462348
+      beggar_idle-Sheet-imageonline.co-merged_2: 3251184847451545816
+      beggar_idle-Sheet-imageonline.co-merged_20: -1517583089936501347
+      beggar_idle-Sheet-imageonline.co-merged_21: -6866665030430406164
+      beggar_idle-Sheet-imageonline.co-merged_22: 2050270873500238546
+      beggar_idle-Sheet-imageonline.co-merged_23: 1451226899030882910
+      beggar_idle-Sheet-imageonline.co-merged_24: 8720097650512891360
+      beggar_idle-Sheet-imageonline.co-merged_25: 2305043244089791841
+      beggar_idle-Sheet-imageonline.co-merged_26: -5844927183450591979
+      beggar_idle-Sheet-imageonline.co-merged_27: -5726581212981065849
+      beggar_idle-Sheet-imageonline.co-merged_28: 424159454501042238
+      beggar_idle-Sheet-imageonline.co-merged_29: 2868131471105125643
+      beggar_idle-Sheet-imageonline.co-merged_3: 3061745580691628993
+      beggar_idle-Sheet-imageonline.co-merged_30: -7389906192474394874
+      beggar_idle-Sheet-imageonline.co-merged_31: 2270989660724765875
+      beggar_idle-Sheet-imageonline.co-merged_32: -8206604246721034129
+      beggar_idle-Sheet-imageonline.co-merged_33: 887473960122033199
+      beggar_idle-Sheet-imageonline.co-merged_34: 6991430624535705209
+      beggar_idle-Sheet-imageonline.co-merged_35: 131232449417545173
+      beggar_idle-Sheet-imageonline.co-merged_36: 7875256875679169528
+      beggar_idle-Sheet-imageonline.co-merged_37: 8632775044495523543
+      beggar_idle-Sheet-imageonline.co-merged_38: -7268609287494744865
+      beggar_idle-Sheet-imageonline.co-merged_39: 1338222391541236512
+      beggar_idle-Sheet-imageonline.co-merged_4: 5527248482410029230
+      beggar_idle-Sheet-imageonline.co-merged_40: -4423155108794035721
+      beggar_idle-Sheet-imageonline.co-merged_41: -7444141889649195668
+      beggar_idle-Sheet-imageonline.co-merged_42: -3010948753781397082
+      beggar_idle-Sheet-imageonline.co-merged_5: -6312517393929731020
+      beggar_idle-Sheet-imageonline.co-merged_6: 5222021436728845178
+      beggar_idle-Sheet-imageonline.co-merged_7: 3649620208387315581
+      beggar_idle-Sheet-imageonline.co-merged_8: 2895123624910594382
+      beggar_idle-Sheet-imageonline.co-merged_9: -1940833746043469810
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

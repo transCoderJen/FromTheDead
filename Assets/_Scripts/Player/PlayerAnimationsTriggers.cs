@@ -24,7 +24,13 @@ public class PlayerAnimationsTriggers : MonoBehaviour
                 EnemyStats _target = hit.GetComponent<EnemyStats>();
 
                 if (_target != null)
-                    player.stats.DoDamage(_target, true);
+                {
+                    float damagePower = 1;
+                    if (player.primaryAttack.getComboCounter() == 2) { damagePower = 1.2f; }
+                    
+                    player.stats.DoDamage(_target, true, damagePower);
+                    player.fx.ScreenShake(player.fx.lightShakePower);
+                }
 
                 //TODO WEAPON MODIFIER
                 //Inventory.instance.GetEquipment(EquipmentType.Weapon)?.Effect(_target.transform);

@@ -183,6 +183,8 @@ MonoBehaviour:
   knockbackDuration: 0.2
   attackCheck: {fileID: 5029843866600164975}
   attackCheckRadius: 0.99
+  attackCheck2: {fileID: 0}
+  attackCheckRadius2: 0
   groundCheck: {fileID: 2437313163576971081}
   groundCheckDistance: 0.24
   wallCheck: {fileID: 7314476708892640569}
@@ -195,7 +197,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   stunDuration: 1
-  stunDirection: {x: 1, y: 1}
+  stunDirection: {x: 7, y: 12}
   counterImage: {fileID: 7278782040266266717}
   moveSpeed: 5.5
   idleTime: 2
@@ -286,7 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpTextPrefab: {fileID: 5024216948461445043, guid: 7bd6a40ca1f1d3a4f9a45c98a2c2196d, type: 3}
   hitMat: {fileID: 2100000, guid: f13d85c33b1e5ba4c9c7d3bf2490cf4c, type: 2}
-  flashDuration: 0.2
+  flashDuration: 0.02
   flashCount: 4
   chillColor: {r: 0, g: 0, b: 0, a: 0}
   igniteColor:
@@ -299,8 +301,8 @@ MonoBehaviour:
   chillFx: {fileID: 0}
   shockFx: {fileID: 0}
   soundEffectsGroup: {fileID: 0}
-  hitFxPrefab: {fileID: 0}
-  critHitFxPrefab: {fileID: 0}
+  hitFxPrefab: {fileID: 1317785407803777038, guid: 75123df1d8a17fe44ad74e20c87c9d8d, type: 3}
+  critHitFxPrefab: {fileID: 1317785407803777038, guid: 75123df1d8a17fe44ad74e20c87c9d8d, type: 3}
   runningdDustFx: {fileID: 0}
   landingDustFx: {fileID: 0}
 --- !u!1 &6119589990224056483

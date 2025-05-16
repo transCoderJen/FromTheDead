@@ -7,6 +7,8 @@ using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using Random = UnityEngine.Random;
 
 public enum DustParticleType {
@@ -15,6 +17,7 @@ public enum DustParticleType {
 }
 public class EntityFX : MonoBehaviour
 {
+    
     [Header("Pop Up Text")]
     [SerializeField] private GameObject popUpTextPrefab;
 
@@ -53,6 +56,8 @@ public class EntityFX : MonoBehaviour
         sr = GetComponentInChildren<SpriteRenderer>();
         originalMat = sr.material;
     }
+
+
     
     public void CreatePopUpText(string _text)
     {
