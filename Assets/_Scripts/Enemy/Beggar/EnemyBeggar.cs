@@ -56,8 +56,9 @@ public class EnemyBeggar : Enemy
         {
             rotation = Quaternion.Euler(0, 180, 0);
         }
-        
-        Instantiate(projectilePrefab, position, rotation);
+
+        GameObject begg_Shot = Instantiate(projectilePrefab, position, rotation);
+        begg_Shot.GetComponent<BeggShot>().Initialize(this);
     }
 }
 

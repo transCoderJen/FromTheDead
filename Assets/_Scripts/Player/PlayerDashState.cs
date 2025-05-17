@@ -37,7 +37,7 @@ public class PlayerDashState : PlayerState
         // Create dust particles if the player is on the ground
 
         player.sr.material = player.dashMat; // Change the player's material to the dash material
-        
+
         if (player.IsGroundDetected())
             player.fx.CreateDustParticles(DustParticleType.Running);
 
@@ -47,6 +47,8 @@ public class PlayerDashState : PlayerState
         // Set the timer for how long the dash lasts
         stateTimer = player.dashDuration;
         stateName = "Dash"; // Set the state name for debugging or logging purposes
+        
+        AudioManager.Instance.PlaySFX("Player_Dash"); // Play the dash sound effect
     }
 
     /// <summary>

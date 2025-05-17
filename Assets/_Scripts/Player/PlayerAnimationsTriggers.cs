@@ -12,9 +12,7 @@ public class PlayerAnimationsTriggers : MonoBehaviour
     }
 
     private void AttackTrigger()
-    {
-        // AudioManager.instance.PlaySFX(SFXSounds.attack3, null);
-        
+    {        
         Collider2D[] colliders = Physics2D.OverlapCircleAll(player.attackCheck.position, player.attackCheckRadius);
 
         foreach(var hit in colliders)
@@ -27,9 +25,10 @@ public class PlayerAnimationsTriggers : MonoBehaviour
                 {
                     float damagePower = 1;
                     if (player.primaryAttack.getComboCounter() == 2) { damagePower = 1.2f; }
-                    
+
                     player.stats.DoDamage(_target, true, damagePower);
                     player.fx.ScreenShake(player.fx.lightShakePower);
+                    AudioManager.Instance.PlaySFX("Player_Attack_2");
                 }
 
                 //TODO WEAPON MODIFIER
@@ -39,9 +38,7 @@ public class PlayerAnimationsTriggers : MonoBehaviour
     }
 
     private void AttackTrigger2()
-    {
-        // AudioManager.instance.PlaySFX(SFXSounds.attack3, null);
-        
+    {     
         Collider2D[] colliders = Physics2D.OverlapCircleAll(player.attackCheck2.position, player.attackCheckRadius2);
 
         foreach(var hit in colliders)
@@ -53,6 +50,7 @@ public class PlayerAnimationsTriggers : MonoBehaviour
                 if (_target != null)
                     player.stats.DoDamage(_target, true);
 
+                AudioManager.Instance.PlaySFX("Player_Attack_2");
                 //TODO WEAPON MODIFIER
                 //Inventory.instance.GetEquipment(EquipmentType.Weapon)?.Effect(_target.transform);
             }

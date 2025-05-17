@@ -12,6 +12,9 @@ public class Player : Entity
     public Material attack3Mat;
     public Material respawnHolyMat;
     public Material dashMat;
+    public Material runMat;
+    public Material jumpMat;
+
 
     [Header("Attack Details")]
     public Vector2[] attackMovement;

@@ -17,6 +17,7 @@ public class PlayerCounterAttackState : PlayerState
         stateTimer = player.counterAttackDuration;
         stateName = "Parry";
         player.anim.SetBool("SuccessfulCounterAttack", false);
+        player.ZeroVelocity();
     }
 
     public override void Exit()
@@ -29,12 +30,12 @@ public class PlayerCounterAttackState : PlayerState
         base.Update();
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(player.attackCheck.position, player.attackCheckRadius);
-        
-        foreach(var hit in colliders)
+
+        foreach (var hit in colliders)
         {
             if (hit.GetComponent<Enemy>() != null)
             {
-                if(hit.GetComponent<Enemy>().CanBeStunned())
+                if (hit.GetComponent<Enemy>().CanBeStunned())
                 {
                     stateTimer = 10;
                     player.anim.SetBool("SuccessfulCounterAttack", true);
@@ -43,8 +44,18 @@ public class PlayerCounterAttackState : PlayerState
                     //TODO SkillManager.instance.parry.UseSkill();
 
                     //TODO player.skill.parry.MakeMirageOnParry(hit.transform, new Vector3(2.5f * player.facingDir, 0));
-                    
+
                 }
+            }
+
+            if (hit.GetComponent<BeggShot>() != null)
+            {
+                Debug.Log("Hit BeggShot CoutnerAttack");
+                hit.GetComponent<BeggShot>().CounterAttack();
+                player.stats.ImpactEffect(.2f);
+                stateTimer = 10;
+                player.anim.SetBool("SuccessfulCounterAttack", true);
+                stateName = "Parry_Success";
             }
         }
 

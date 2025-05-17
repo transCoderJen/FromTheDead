@@ -11,7 +11,11 @@ public class PlayerWalkState : PlayerGroundedState
         base.Enter();
 
         stateName = "Walk";
-    }
+        player.sr.material = player.runMat;
+        if (player.IsGroundDetected())
+            player.fx.CreateDustParticles(DustParticleType.Running);
+        AudioManager.Instance.PlaySFX("Player_Footsteps");
+    }    
 
     public override void Update()
     {
@@ -32,5 +36,6 @@ public class PlayerWalkState : PlayerGroundedState
     public override void Exit()
     {
         base.Exit();
+        AudioManager.Instance.StopSFX("Player_Footsteps");
     }
 }

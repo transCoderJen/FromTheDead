@@ -11,10 +11,11 @@ public class PlayerRespawnHolyState : PlayerState
     {
         base.Enter();
         player.sr.material = player.respawnHolyMat;
+
         player.transform.position = player.respawnPosition.position;
         player.ZeroVelocity();
 
-        player.SlowEntityBy(1,.2f);
+        player.SlowEntityBy(1, .2f);
     }
 
     public override void Update()

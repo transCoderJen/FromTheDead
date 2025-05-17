@@ -12,6 +12,7 @@ public class PlayerJumpState : PlayerState
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, player.jumpForce);
         player.jumpCount++;
         stateName = "Jump";
+        player.sr.material = player.jumpMat;
     }
 
     public override void Update()

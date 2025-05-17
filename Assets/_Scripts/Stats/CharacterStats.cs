@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using Random = UnityEngine.Random;
 using IEnumerator = System.Collections.IEnumerator;
+using JetBrains.Annotations;
 
 public enum StatType
 {
@@ -96,7 +97,7 @@ public class CharacterStats : MonoBehaviour
 
         if (ignitedTimer <= 0)
         {
-            // isIgnited = false;
+            isIgnited = false;
             // burningAudio.Stop();
         }
 
@@ -183,9 +184,9 @@ public class CharacterStats : MonoBehaviour
 
     public virtual void TakeDamage(int _damage, bool _knockback)
     {
-        StartCoroutine(ImpactEffectCoroutine()); 
+        if (GetComponentInParent<Player>() != null)
+            ImpactEffect();
         
-
         if (isInvincible)
             return;
         GetComponent<Entity>().DamageEffect(_knockback);
@@ -195,10 +196,15 @@ public class CharacterStats : MonoBehaviour
             Die();
     }
 
-    private IEnumerator ImpactEffectCoroutine()
+    public void ImpactEffect(float _duration = .01f)
+    {
+        StartCoroutine(ImpactEffectCoroutine(_duration));
+    }
+    
+    private IEnumerator ImpactEffectCoroutine(float _duration)
     {
         Time.timeScale = .1f;
-        yield return new WaitForSecondsRealtime(.1f);
+        yield return new WaitForSecondsRealtime(_duration);
         Time.timeScale = 1f;
     }
 

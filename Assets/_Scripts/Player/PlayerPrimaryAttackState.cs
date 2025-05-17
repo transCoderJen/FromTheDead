@@ -17,17 +17,26 @@ public class PlayerPrimaryAttackState : PlayerState
 
         xInput = 0;
 
-        
+
 
         if (comboCounter > 2 || Time.time >= lastTimeAttaked + comboWindow)
             comboCounter = 0;
-        
+
         if (comboCounter == 0)
+        {
             player.sr.material = player.attack1Mat;
+            AudioManager.Instance.PlaySFX("Player_Attack_1");
+        }
         else if (comboCounter == 1)
+        {
             player.sr.material = player.attack2Mat;
+            AudioManager.Instance.PlaySFX("Player_Attack_1");
+        }
         else if (comboCounter == 2)
+        {
             player.sr.material = player.attack3Mat;
+            AudioManager.Instance.PlaySFX("Player_Attack_3");
+        }
             
         player.anim.SetInteger("ComboCounter", comboCounter);
         stateName = "Attack" + comboCounter;
@@ -36,9 +45,9 @@ public class PlayerPrimaryAttackState : PlayerState
 
         if (xInput !=0)
             attackDir = xInput;
-
-        if (player.IsGroundDetected())
-            player.SetVelocity(player.attackMovement[comboCounter].x * attackDir, player.attackMovement[comboCounter].y);
+        
+        if (player.IsGroundDetected() && comboCounter > 0)
+                player.SetVelocity(player.attackMovement[comboCounter].x * attackDir, player.attackMovement[comboCounter].y);
         else
             player.SetVelocity(rb.linearVelocity.x, rb.linearVelocity.y);
 
@@ -57,6 +66,11 @@ public class PlayerPrimaryAttackState : PlayerState
 
     public override void Update()
     {
+        if (xInput == 1 && player.facingDir == -1)
+            player.Flip();
+        else if (xInput == -1 && player.facingDir == 1)
+            player.Flip();
+
         base.Update();
 
         if (stateTimer < 0 && player.IsGroundDetected())
