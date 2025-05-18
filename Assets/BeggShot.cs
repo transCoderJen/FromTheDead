@@ -5,11 +5,11 @@ public class BeggShot : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
     [SerializeField] private float lifeTime = 2f;
-    [SerializeField] private EnemyBeggar beggar;
+    [SerializeField] private Enemy beggar;
     private bool targetPlayer = true;
     private int travelDirection = 1;
 
-    public void Initialize(EnemyBeggar beggar)
+    public void Initialize(Enemy beggar)
     {
         this.beggar = beggar;
     }

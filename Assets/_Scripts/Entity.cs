@@ -50,7 +50,16 @@ public class Entity : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
         stats = GetComponent<CharacterStats>();
-        cd = GetComponent<CapsuleCollider2D>();
+        if (GetComponent<CapsuleCollider2D>() == null)
+        {
+            PolygonCollider2D cd;
+            cd = GetComponent<PolygonCollider2D>();
+        }
+        else
+        {
+            
+            cd = GetComponent<CapsuleCollider2D>();
+        }
     }
 
     public virtual void SlowEntityBy(float _slowPercentage, float _slowDuration)

@@ -189,6 +189,9 @@ public class CharacterStats : MonoBehaviour
         
         if (isInvincible)
             return;
+
+        // fx.FlashHitFX();
+
         GetComponent<Entity>().DamageEffect(_knockback);
         DecreaseHealthBy(_damage);
 

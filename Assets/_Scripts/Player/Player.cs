@@ -51,6 +51,8 @@ public class Player : Entity
     [HideInInspector]public bool nextAttackQueued = false; // Flag to store input for the next attack
     public bool isBusy { get; private set; }
     public PlayerFX fx { get; private set; }
+    
+    
     protected override void Awake()
     {
         base.Awake();
@@ -62,10 +64,10 @@ public class Player : Entity
         fallState = new PlayerFallState(this, stateMachine, "jump");
         jumpState = new PlayerJumpState(this, stateMachine, "jump");
         dashState = new PlayerDashState(this, stateMachine, "dash");
-        
+
         respawnHolyState = new PlayerRespawnHolyState(this, stateMachine, "respawnHoly");
 
-        primaryAttack= new PlayerPrimaryAttackState(this, stateMachine, "attack");
+        primaryAttack = new PlayerPrimaryAttackState(this, stateMachine, "attack");
         counterAttack = new PlayerCounterAttackState(this, stateMachine, "counter");
     }
 

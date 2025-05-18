@@ -1,28 +1,31 @@
 fileFormatVersion: 2
-guid: b92709ceb84610d46b8fbd74b0d5ba43
+guid: 6cdf7296d3a306f42ac6b99d36cadc0e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7043984996573275655
-    second: Charge_0
+      213: -6467499720295795977
+    second: Hydra_0
   - first:
-      213: -566703658126030194
-    second: Charge_1
+      213: 4926761630071503352
+    second: Hydra_1
   - first:
-      213: 6256210931507321577
-    second: Charge_2
+      213: 4289562892611146519
+    second: Hydra_2
   - first:
-      213: -5836993557942118350
-    second: Charge_3
+      213: 9136747212597514508
+    second: Hydra_3
   - first:
-      213: -1925022604624453576
-    second: Charge_4
+      213: -2541103358571744273
+    second: Hydra_4
   - first:
-      213: -2250842547723467441
-    second: Charge_5
+      213: 7280525935452323883
+    second: Hydra_5
   - first:
-      213: -1474126701674958951
-    second: Charge_6
+      213: -1465444975076325486
+    second: Hydra_6
+  - first:
+      213: -8144831484968401698
+    second: Hydra_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -131,111 +134,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Charge_0
+      name: Body
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.39773598, y: 0.5818109}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7066ee3a80341c160800000000000000
-      internalID: 7043984996573275655
+      spriteID: 7f2b4da4543de36a0800000000000000
+      internalID: -6467499720295795977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Charge_1
+      name: Hand
       rect:
         serializedVersion: 2
-        x: 64
+        x: 194
         y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.42685938, y: 0.7194216}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e8acb74860aa228f0800000000000000
-      internalID: -566703658126030194
+      spriteID: 8f9bf65799f5f5440800000000000000
+      internalID: 4926761630071503352
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Charge_2
+      name: Head
       rect:
         serializedVersion: 2
-        x: 128
+        x: 384
         y: 0
-        width: 64
-        height: 64
+        width: 192
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9ead86402b682d650800000000000000
-      internalID: 6256210931507321577
+      spriteID: 713d8c749b6978b30800000000000000
+      internalID: 4289562892611146519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Charge_3
+      name: Jaw
       rect:
         serializedVersion: 2
-        x: 192
+        x: 576
         y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.22902393, y: 0.65760887}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 238dd96e845defea0800000000000000
-      internalID: -5836993557942118350
+      spriteID: c015a696e2f3cce70800000000000000
+      internalID: 9136747212597514508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Charge_4
+      name: Spike_1
       rect:
         serializedVersion: 2
-        x: 256
+        x: 768
         y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.3841006, y: 0.81360894}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3d76d353697e960418e335597ef99cf6
-      internalID: -1925022604624453576
+      spriteID: fe377ce65ff2cbcd0800000000000000
+      internalID: -2541103358571744273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike_2
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.47272873, y: 0.81360894}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2087a0b3cf990560800000000000000
+      internalID: 7280525935452323883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike_3
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.540905, y: 0.81360894}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 297c1b63f81b9abe0800000000000000
+      internalID: -1465444975076325486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spike_4
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 192
+        height: 192
+      alignment: 9
+      pivot: {x: 0.6090806, y: 0.7931562}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed48a07eaeeb7fe80800000000000000
+      internalID: -8144831484968401698
       vertices: []
       indices: 
       edges: []
@@ -244,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 09597976bb7510a42a8a9aaf3bd7f697
+    spriteID: cbef9d2ded0a4a741bb9bbc20d9e63f3
     internalID: 0
     vertices: []
     indices: 
@@ -254,11 +323,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Charge_0: 7043984996573275655
-      Charge_1: -566703658126030194
-      Charge_2: 6256210931507321577
-      Charge_3: -5836993557942118350
-      Charge_4: -1925022604624453576
+      Body: -6467499720295795977
+      Hand: 4926761630071503352
+      Head: 4289562892611146519
+      Jaw: 9136747212597514508
+      Spike_1: -2541103358571744273
+      Spike_2: 7280525935452323883
+      Spike_3: -1465444975076325486
+      Spike_4: -8144831484968401698
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

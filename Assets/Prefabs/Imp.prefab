@@ -292,11 +292,11 @@ MonoBehaviour:
   flashCount: 4
   chillColor: {r: 0, g: 0, b: 0, a: 0}
   igniteColor:
-  - {r: 0.8301887, g: 0.14489143, b: 0.14489143, a: 0}
-  - {r: 0.8867924, g: 0.39576998, b: 0.24679601, a: 0}
+  - {r: 0.8301887, g: 0.14489143, b: 0.14489143, a: 1}
+  - {r: 0.8867924, g: 0.39576998, b: 0.24679601, a: 1}
   shockColor:
-  - {r: 0.7924528, g: 0.6700874, b: 0.20558919, a: 0}
-  - {r: 0.8207547, g: 0.6474727, b: 0.17421682, a: 0}
+  - {r: 0.7924528, g: 0.6700874, b: 0.20558919, a: 1}
+  - {r: 0.8207547, g: 0.6474727, b: 0.17421682, a: 1}
   igniteFx: {fileID: 0}
   chillFx: {fileID: 0}
   shockFx: {fileID: 0}
@@ -480,7 +480,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: fb87fe9c63518044d893afd4715ae95d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -501,12 +501,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4723107735738678597, guid: db9d8fc906e1b7c46883c77186608859, type: 3}
+  m_Sprite: {fileID: -960569942240266371, guid: f85b72f848c4eb94cab168c6ce165f26, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.125, y: 3.125}
+  m_Size: {x: 4, y: 4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

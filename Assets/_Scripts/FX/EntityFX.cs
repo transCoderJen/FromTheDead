@@ -4,14 +4,13 @@ using System.Collections;
 
 
 using TMPro;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.Rendering;
-using UnityEngine.Rendering.Universal;
+
 using Random = UnityEngine.Random;
 
-public enum DustParticleType {
+public enum DustParticleType
+{
     Running,
     Landing
 }
@@ -49,12 +48,17 @@ public class EntityFX : MonoBehaviour
     [SerializeField] private ParticleSystem runningdDustFx;
     [SerializeField] private ParticleSystem landingDustFx;
 
-    SpriteRenderer sr;
+    SpriteRenderer[] srs;
 
     protected virtual void Start()
     {
-        sr = GetComponentInChildren<SpriteRenderer>();
-        originalMat = sr.material;
+        srs = GetComponentsInChildren<SpriteRenderer>();
+
+        originalMat = srs[0].material;
+
+        burningAudio = gameObject.AddComponent<AudioSource>();
+        burningAudio.clip = AudioManager.Instance.getSFXAudioSource("burning").clip;
+        burningAudio.outputAudioMixerGroup = soundEffectsGroup;  
     }
 
 
@@ -76,36 +80,54 @@ public class EntityFX : MonoBehaviour
 
         if (_transparent)
         {
-            sr.color = Color.clear;
+            foreach (SpriteRenderer sr in srs)
+            {
+                sr.color = Color.clear;
+            }
             slider.alpha = 0;
         }
         else
         {
-            sr.color = Color.white;
+            foreach (SpriteRenderer sr in srs)
+            {
+                sr.color = Color.white;
+            }
             slider.alpha = 1;
         }
+    }
+
+    public void FlashHitFX()
+    {
+        StartCoroutine(FlashFX());
     }
 
     private IEnumerator FlashFX()
     {
         for (int i = 1; i < flashCount; i++)
         {
-            sr.material = hitMat;
+            foreach (SpriteRenderer sr in srs)
+            {
+                sr.material = hitMat;
+            }
 
-            yield return new WaitForSeconds(flashDuration);
+        yield return new WaitForSeconds(flashDuration);
 
-            sr.material = originalMat;
+            foreach (SpriteRenderer sr in srs)
+            {
+                sr.material = originalMat;
+            }
+
             yield return new WaitForSeconds(flashDuration);
         }
     }
 
-    private void RedColorBlink()
-    {
-        if (sr.color != Color.white)
-            sr.color = Color.white;
-        else
-            sr.color = Color.red;
-    }
+    // private void RedColorBlink()
+    // {
+    //     if (sr.color != Color.white)
+    //         sr.color = Color.white;
+    //     else
+    //         sr.color = Color.red;
+    // }
 
     [ContextMenu("Test Ignite FX")]
     public void TestIgniteFX()
@@ -117,7 +139,7 @@ public class EntityFX : MonoBehaviour
     {
         Debug.Log("Ignite FX");
         igniteFx.Play();
-        // burningAudio.Play();
+        burningAudio.Play();
         InvokeRepeating("IgniteColorFX", 0, .15f);
         Invoke("CancelColorChange", _seconds);
     }
@@ -125,7 +147,11 @@ public class EntityFX : MonoBehaviour
     public void ChillFxFor(float _seconds)
     {
         chillFx.Play();
-        sr.color = chillColor;
+
+        foreach (SpriteRenderer sr in srs)
+        {
+            sr.color = chillColor;
+        }
         Invoke("CancelColorChange", _seconds);
     }
 
@@ -139,31 +165,55 @@ public class EntityFX : MonoBehaviour
     
     private void IgniteColorFX()
     {
-        if (sr.color != igniteColor[0])
-            sr.color = igniteColor[0];
+        if (srs[0].color != igniteColor[0])
+        {
+            foreach (SpriteRenderer sr in srs)
+            {
+                sr.color = igniteColor[0];
+            }
+        }
         else
-            sr.color = igniteColor[1];
+        {
+            foreach (SpriteRenderer sr in srs)
+            {
+                sr.color = igniteColor[1];
+            }
+        }
     }
 
     private void ShockColorFX()
     {
-        if (sr.color != shockColor[0])
-            sr.color = shockColor[0];
+        if (srs[0].color != shockColor[0])
+        {
+            foreach (SpriteRenderer sr in srs)
+            {
+                sr.color = shockColor[0];
+            }
+        }
         else
-            sr.color = shockColor[1];
+        {
+            foreach (SpriteRenderer sr in srs)
+            {
+                sr.color = shockColor[1];
+            }
+        }
     }
 
     private void CancelColorChange()
     {
         CancelInvoke();
-        sr.color = Color.white;
+        foreach (SpriteRenderer sr in srs)
+        {
+            sr.color = Color.white;
+        }
+        
         StopAllParticleFx();
         StopAllFxAudio();
     }
 
     public void StopAllFxAudio()
     {
-        // burningAudio.Stop();
+        burningAudio.Stop();
     }
 
     private void StopAllParticleFx()
@@ -213,13 +263,14 @@ public class EntityFX : MonoBehaviour
         {
             case DustParticleType.Running:
                 if (!runningdDustFx.isPlaying)
-                    runningdDustFx.Play();        
+                    runningdDustFx.Play();
                 return;
-            
+
             case DustParticleType.Landing:
                 if (!landingDustFx.isPlaying)
-                    landingDustFx.Play();        
+                    landingDustFx.Play();
                 return;
+            
         }
     }
 }

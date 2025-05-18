@@ -47,6 +47,12 @@ TagManager:
   - name: Ground
     uniqueID: 1794530559
     locked: 0
+  - name: Checkpoint
+    uniqueID: 2164904547
+    locked: 0
+  - name: Hydra
+    uniqueID: 4143216249
+    locked: 0
   - name: Player
     uniqueID: 1502171137
     locked: 0

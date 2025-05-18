@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(CapsuleCollider2D))]
 [RequireComponent(typeof(EnemyStats))]
 [RequireComponent(typeof(EntityFX))]
 // [RequireComponent(typeof(ItemDrop))]
@@ -64,7 +63,7 @@ public class Enemy : Entity
 
     public override void DamageEffect(bool _knockback)
     {
-        fx.StartCoroutine("FlashFX");
+        fx.FlashHitFX();
         
         base.DamageEffect(_knockback);   
     }
@@ -153,6 +152,9 @@ public class Enemy : Entity
 
     private void UpdateStateText()
     {
+        if (debugStateText == null)
+            return;
+            
         debugStateText.text = stateMachine.currentStateName;
 
         debugStateText.GetComponent<Transform>().position = transform.position + new Vector3(0, 2, 0);

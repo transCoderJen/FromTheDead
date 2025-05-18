@@ -42,8 +42,10 @@ public class AudioManager : Singleton<AudioManager>
     {
         if (sfxDictionary.TryGetValue(sfxName, out int index))
         {
-            if (source != null && Vector2.Distance(PlayerManager.Instance.transform.position, source.position) > sfxMinimumDistance)
+            if (source != null && Vector2.Distance(PlayerManager.Instance.player.transform.position, source.position) > sfxMinimumDistance)
+            {
                 return;
+            }
 
             sfx[index].pitch = Random.Range(.85f, 1.15f);
             sfx[index].Play();

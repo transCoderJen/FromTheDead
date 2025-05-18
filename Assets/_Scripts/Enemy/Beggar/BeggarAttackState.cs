@@ -13,6 +13,7 @@ public class BeggarAttackState : EnemyState
     {
         base.Enter();
         stateName = "Attack";
+        AudioManager.Instance.PlaySFX("evil_voice", enemy.transform);
     }
 
     public override void Update()

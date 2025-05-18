@@ -23,8 +23,6 @@ public class PlayerFallState : PlayerState
     {
         base.Update();
 
-        Debug.Log(player.stateMachine.previousStateName);
-
         if (Input.GetKey(KeyCode.Space) && stateTimer > 0 && player.stateMachine.previousStateName == "PlayerWalkState" && player.jumpCount < 2)
             stateMachine.ChangeState(player.jumpState);
 

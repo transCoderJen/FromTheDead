@@ -13,7 +13,8 @@ public class SkeletonAttackState : EnemyState
     public override void Enter()
     {
         base.Enter();
-        stateName = "ATtack";
+        stateName = "Attack";
+        AudioManager.Instance.PlaySFX("monster_growl");
     }
 
     public override void Exit()
