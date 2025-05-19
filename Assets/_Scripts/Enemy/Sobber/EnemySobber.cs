@@ -15,8 +15,8 @@ public class EnemySobber : Enemy
         base.Awake();
 
         idleState = new SobberIdleState(this, stateMachine, "Idle", this);
-        battleState = new SobberBattleState(this, stateMachine, "Move", this);
-        attackState = new SobberAttackState(this, stateMachine, "Attack", this);
+        battleState = new SobberBattleState(this, stateMachine, "Idle", this);
+        attackState = new SobberAttackState(this, stateMachine, "Idle", this);
         deadState = new SobberDeadState(this, stateMachine, "Idle", this);
 
         SetupDefaultFacingDir(-1);

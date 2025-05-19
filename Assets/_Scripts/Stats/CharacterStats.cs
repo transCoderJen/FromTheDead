@@ -166,10 +166,12 @@ public class CharacterStats : MonoBehaviour
         if (CanCrit())
         {
             totalDamage = CalculateCriticalDamage(totalDamage);
-            fx.CreateCritHitFx(_targetStats.transform, entity.facingDir);
+            if (fx != null)
+                fx.CreateCritHitFx(_targetStats.transform, entity.facingDir);
         }
 
-        fx.CreateHitFx(_targetStats.transform);
+        if (fx != null)
+            fx.CreateHitFx(_targetStats.transform);
 
 
         totalDamage = CheckTargetArmor(_targetStats, totalDamage);

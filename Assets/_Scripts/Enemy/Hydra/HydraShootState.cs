@@ -37,10 +37,17 @@ public class HydraShootState : EnemyState
 
     private IEnumerator CreateMultipleProjectiles()
     {
-        for (int i = 0; i < 3; i++)
+        bool fireball = Random.value > 0.5f ? true : false;
+        
+
+        for (int i = 0; i < Random.Range(1,5); i++)
         {
-            enemy.CreateProjectile(enemy.projectileSpawnPoint.position, enemy.transform.rotation);
-            yield return new WaitForSeconds(1f);
+            if (fireball)
+                enemy.CreateProjectile(enemy.projectileSpawnPoint.position, enemy.transform.rotation);
+            else
+                enemy.CreateSpike();
+
+            yield return new WaitForSeconds(Random.Range(1.5f, 3f));
         }
     }
 }

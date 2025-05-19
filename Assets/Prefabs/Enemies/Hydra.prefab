@@ -656,28 +656,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strength:
-    baseValue: 0
+    baseValue: 10
     modifiers: 
   agility:
-    baseValue: 0
+    baseValue: 10
     modifiers: 
   intelligence:
-    baseValue: 0
+    baseValue: 5
     modifiers: 
   vitality:
     baseValue: 0
     modifiers: 
   damage:
-    baseValue: 0
+    baseValue: 2
     modifiers: 
   critChance:
-    baseValue: 0
+    baseValue: 20
     modifiers: 
   critPower:
-    baseValue: 0
+    baseValue: 5
     modifiers: 
   maxHealth:
-    baseValue: 0
+    baseValue: 300
     modifiers: 
   armor:
     baseValue: 0
