@@ -15,6 +15,8 @@ public class PlayerWalkState : PlayerGroundedState
         if (player.IsGroundDetected())
             player.fx.CreateDustParticles(DustParticleType.Running);
         AudioManager.Instance.PlaySFX("Player_Footsteps");
+        player.ResetMaterial();
+        
     }    
 
     public override void Update()

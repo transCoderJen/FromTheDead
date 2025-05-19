@@ -16,6 +16,8 @@ public class PlayerRespawnHolyState : PlayerState
         player.ZeroVelocity();
 
         player.SlowEntityBy(1, .2f);
+        
+        player.ResetMaterial();
     }
 
     public override void Update()

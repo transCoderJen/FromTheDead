@@ -17,6 +17,7 @@ public class PlayerFallState : PlayerState
         defaultGravityScale = player.rb.gravityScale;
         player.rb.gravityScale *= 1.5f; // Increase gravity (adjust multiplier as needed)
         stateName = "Fall";
+        player.ResetMaterial();
     }
 
     public override void Update()

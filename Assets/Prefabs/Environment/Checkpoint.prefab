@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 4201026220837710351}
   - component: {fileID: 3261849088473162549}
   - component: {fileID: 1700211363155705748}
+  - component: {fileID: 173739460626766958}
   m_Layer: 0
   m_Name: Checkpoint
   m_TagString: Untagged
@@ -143,7 +144,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: d88f06b9052f94d4495ea85cb384a379, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -235,7 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   activated: 0
-  checkpointMat: {fileID: 2100000, guid: 9c0f41974dfed0340990082893ab16d8, type: 2}
+  checkpointMat: {fileID: 2100000, guid: d88f06b9052f94d4495ea85cb384a379, type: 2}
 --- !u!95 &1700211363155705748
 Animator:
   serializedVersion: 7
@@ -258,3 +259,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &173739460626766958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6689022586416388256}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f95f4cea239b434492b31b9dc5c56ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTrigger: 0
+  minBloomIntensity: 0.5
+  maxBloomIntensity: 3.54
+  speed: 2
+  pulseDuration: 1

@@ -7,10 +7,13 @@ public class Checkpoint : MonoBehaviour
     public string id;
     public bool activated;
     [SerializeField] private Material checkpointMat;
+    private PulseIntensity pulseIntensity;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
+        pulseIntensity = GetComponent<PulseIntensity>();
+        
     }
 
     [ContextMenu("Generate checkpoint id")]
@@ -30,11 +33,12 @@ public class Checkpoint : MonoBehaviour
     public void ActivateCheckpoint()
     {
         // TODO Checkpint SFX
-        // AudioManager.Instance.PlaySFX(SFXSounds.checkpoint, null);
+        AudioManager.Instance.PlaySFX("Checkpoint");
         PlayerManager.Instance.player.respawnPosition = transform;
         activated = true;
         GetComponent<SpriteRenderer>().material = checkpointMat;
         anim.SetBool("Activating", true);
+        pulseIntensity.enabled = true;
     }
 
     private void ActivateFinishTrigger()

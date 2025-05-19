@@ -18,6 +18,7 @@ public class PlayerCounterAttackState : PlayerState
         stateName = "Parry";
         player.anim.SetBool("SuccessfulCounterAttack", false);
         player.ZeroVelocity();
+        player.ResetMaterial();
     }
 
     public override void Exit()

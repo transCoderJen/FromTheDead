@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 36d9813505064d248a585e299bc8dd0a
+guid: 0fa1181593530fb4391ed151d43c2e47
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3478054184587268515
-    second: Lava_burst-Sheet_0
-  - first:
-      213: 3560652869705530797
-    second: Lava_burst-Sheet_1
-  - first:
-      213: 3659694966958666850
-    second: Lava_burst-Sheet_2
+      213: -3392506163755405992
+    second: Heal_Emission_1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lava_burst-Sheet_0
+      name: Heal_Emission_1_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 0
         y: 0
-        width: 42
-        height: 11
+        width: 1408
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,52 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3a192e57ad7844030800000000000000
-      internalID: 3478054184587268515
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lava_burst-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 73
-        y: 0
-        width: 15
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dadf54b7beaf96130800000000000000
-      internalID: 3560652869705530797
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lava_burst-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 0
-        width: 120
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2643bdbbe29d9c230800000000000000
-      internalID: 3659694966958666850
+      spriteID: 85d290b4e956be0d0800000000000000
+      internalID: -3392506163755405992
       vertices: []
       indices: 
       edges: []

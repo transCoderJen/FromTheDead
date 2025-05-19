@@ -16,6 +16,8 @@ public class PlayerIdleState : PlayerGroundedState
             player.SetVelocity(player.facingDir * 20f, rb.linearVelocity.y);
         else
             player.ZeroVelocity();
+        
+        player.ResetMaterial();
     }
 
     public override void Update()

@@ -14,6 +14,7 @@ public class Player : Entity
     public Material dashMat;
     public Material runMat;
     public Material jumpMat;
+    public Material healMat;
 
 
     [Header("Attack Details")]
@@ -46,29 +47,40 @@ public class Player : Entity
     public PlayerPrimaryAttackState primaryAttack { get; private set; }
     public PlayerRespawnHolyState respawnHolyState { get; private set; }
     public PlayerCounterAttackState counterAttack { get; private set; }
+    public PlayerHealState healState { get; private set; }
     #endregion
 
-    [HideInInspector]public bool nextAttackQueued = false; // Flag to store input for the next attack
+    [HideInInspector] public bool nextAttackQueued = false; // Flag to store input for the next attack
     public bool isBusy { get; private set; }
     public PlayerFX fx { get; private set; }
-    
-    
+
+    private PulseIntensity pulseIntensity;
+
+
     protected override void Awake()
     {
         base.Awake();
 
         stateMachine = new PlayerStateMachine();
 
+        //Movement States
         idleState = new PlayerIdleState(this, stateMachine, "idle");
         walkState = new PlayerWalkState(this, stateMachine, "walk");
         fallState = new PlayerFallState(this, stateMachine, "jump");
         jumpState = new PlayerJumpState(this, stateMachine, "jump");
-        dashState = new PlayerDashState(this, stateMachine, "dash");
 
+        //Respawn States
         respawnHolyState = new PlayerRespawnHolyState(this, stateMachine, "respawnHoly");
 
+        //Attack States
         primaryAttack = new PlayerPrimaryAttackState(this, stateMachine, "attack");
         counterAttack = new PlayerCounterAttackState(this, stateMachine, "counter");
+        
+        // Skill States
+        dashState = new PlayerDashState(this, stateMachine, "dash");
+        healState = new PlayerHealState(this, stateMachine, "heal");
+
+        pulseIntensity = GetComponent<PulseIntensity>();
     }
 
     protected override void Start()
@@ -100,10 +112,16 @@ public class Player : Entity
         CheckForDashInput();
         //Debugging
         UpdateStateText();
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            pulseIntensity.TriggerPulse();
+        }
     }
 
     private void UpdateStateText()
     {
+        return;
         debugStateText.text = stateMachine.currentStateName;
 
         debugStateText.GetComponent<Transform>().position = transform.position + new Vector3(0, 2, 0);
@@ -113,18 +131,21 @@ public class Player : Entity
     {
         if (IsWallDetected())
             return;
-        
-        if (stateMachine.currentState == jumpState || stateMachine.currentState == fallState)
-            return;
+    
             
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && SkillManager.Instance.dash.CanUseSkill())
         {
             dashDir = Input.GetAxisRaw("Horizontal");
 
             if (dashDir == 0)
-            dashDir = facingDir;
+                dashDir = facingDir;
             stateMachine.ChangeState(dashState);
         }
+    }
+
+    public void ResetMaterial()
+    {
+        pulseIntensity.ResetMaterial();
     }
 
    public void AnimationTrigger() => stateMachine.currentState.AnimationFinishTrigger();

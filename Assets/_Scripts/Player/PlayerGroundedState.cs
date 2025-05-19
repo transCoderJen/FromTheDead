@@ -9,16 +9,19 @@ public class PlayerGroundedState : PlayerState
     public override void Enter()
     {
         base.Enter();
-        player.jumpCount = 0;
+        player.ResetMaterial();
     }
 
     public override void Update()
     {
         base.Update();
 
+
         if (!player.IsGroundDetected())
             stateMachine.ChangeState(player.fallState);
-        
+        else
+            player.jumpCount = 0;
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             stateMachine.ChangeState(player.jumpState);
@@ -29,9 +32,12 @@ public class PlayerGroundedState : PlayerState
         {
             stateMachine.ChangeState(player.counterAttack);
         }
-        
+
         if (Input.GetKeyDown(KeyCode.Mouse0))
             stateMachine.ChangeState(player.primaryAttack);
+            
+        if (Input.GetKeyDown(KeyCode.E))
+            SkillManager.Instance.heal.CanUseSkill();
     }
     public override void FixedUpdate()
     {

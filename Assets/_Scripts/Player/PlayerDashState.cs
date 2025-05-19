@@ -47,8 +47,10 @@ public class PlayerDashState : PlayerState
         // Set the timer for how long the dash lasts
         stateTimer = player.dashDuration;
         stateName = "Dash"; // Set the state name for debugging or logging purposes
-        
+
         AudioManager.Instance.PlaySFX("Player_Dash"); // Play the dash sound effect
+        player.ResetMaterial();
+        player.stats.MakeInvincible(true);
     }
 
     /// <summary>
@@ -64,6 +66,7 @@ public class PlayerDashState : PlayerState
             player.SetVelocity(0, rb.linearVelocity.y); // Stop horizontal movement but retain vertical velocity
         }
         // player.skill.dash.CloneOnArrival(); // Trigger the skill effect for cloning on arrival
+        player.stats.MakeInvincible(false);
         base.Exit();
     }
 

@@ -5388,8 +5388,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.40505219, y: -0.068846226}
-  m_Size: {x: 1.0452881, y: 3.8280382}
+  m_Offset: {x: 0.40505219, y: 0.028569698}
+  m_Size: {x: 1.0452881, y: 3.6332064}
   m_Direction: 0
 --- !u!114 &7594806533010251212
 MonoBehaviour:
@@ -5410,7 +5410,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   intelligence:
-    baseValue: 5
+    baseValue: -5
     modifiers: 
   vitality:
     baseValue: 0

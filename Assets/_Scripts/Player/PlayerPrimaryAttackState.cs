@@ -37,21 +37,23 @@ public class PlayerPrimaryAttackState : PlayerState
             player.sr.material = player.attack3Mat;
             AudioManager.Instance.PlaySFX("Player_Attack_3");
         }
-            
+
         player.anim.SetInteger("ComboCounter", comboCounter);
         stateName = "Attack" + comboCounter;
 
         float attackDir = player.facingDir;
 
-        if (xInput !=0)
+        if (xInput != 0)
             attackDir = xInput;
-        
+
         if (player.IsGroundDetected() && comboCounter > 0)
-                player.SetVelocity(player.attackMovement[comboCounter].x * attackDir, player.attackMovement[comboCounter].y);
+            player.SetVelocity(player.attackMovement[comboCounter].x * attackDir, player.attackMovement[comboCounter].y);
         else
             player.SetVelocity(rb.linearVelocity.x, rb.linearVelocity.y);
 
         stateTimer = .15f;
+        
+        player.ResetMaterial();
     }
 
     public override void Exit()

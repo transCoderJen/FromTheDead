@@ -121,13 +121,23 @@ public class EntityFX : MonoBehaviour
         }
     }
 
-    // private void RedColorBlink()
-    // {
-    //     if (sr.color != Color.white)
-    //         sr.color = Color.white;
-    //     else
-    //         sr.color = Color.red;
-    // }
+    private void RedColorBlink()
+    {
+        if (srs[0].color != Color.white)
+        {
+            foreach (SpriteRenderer sr in srs)
+            {
+                sr.color = Color.white;
+            }
+        }
+        else
+        {
+            foreach (SpriteRenderer sr in srs)
+            {
+                sr.color = Color.red;
+            }
+        }
+    }
 
     [ContextMenu("Test Ignite FX")]
     public void TestIgniteFX()

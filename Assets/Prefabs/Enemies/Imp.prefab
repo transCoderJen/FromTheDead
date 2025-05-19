@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1442845747077487844}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.36, y: 0, z: 0}
+  m_LocalPosition: {x: -1.731, y: -0.514, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 6081845836858553156}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.63, y: -0.05, z: 0}
+  m_LocalPosition: {x: -0.63, y: -0.179, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -163,8 +163,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.25909662, y: -0.07782078}
-  m_Size: {x: 0.8657961, y: 2.7689962}
+  m_Offset: {x: -0.061087787, y: -0.55304193}
+  m_Size: {x: 0.548982, y: 2.1670494}
   m_Direction: 0
 --- !u!114 &646706221394072933
 MonoBehaviour:
@@ -202,10 +202,10 @@ MonoBehaviour:
   moveSpeed: 5.5
   idleTime: 2
   battleTime: 5
-  attackDistance: 3
-  attackCooldown: 1
-  minAttackCooldown: 1
-  maxAttackCooldown: 2
+  attackDistance: 1.4
+  attackCooldown: 0.5
+  minAttackCooldown: 0.5
+  maxAttackCooldown: 1
   lastTimeAttacked: 0
 --- !u!114 &1401830664904137380
 MonoBehaviour:
@@ -290,7 +290,7 @@ MonoBehaviour:
   hitMat: {fileID: 2100000, guid: f13d85c33b1e5ba4c9c7d3bf2490cf4c, type: 2}
   flashDuration: 0.02
   flashCount: 4
-  chillColor: {r: 0, g: 0, b: 0, a: 0}
+  chillColor: {r: 0, g: 0, b: 0, a: 1}
   igniteColor:
   - {r: 0.8301887, g: 0.14489143, b: 0.14489143, a: 1}
   - {r: 0.8867924, g: 0.39576998, b: 0.24679601, a: 1}
@@ -330,7 +330,7 @@ Transform:
   m_GameObject: {fileID: 6119589990224056483}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.24, y: -1.486, z: 0}
+  m_LocalPosition: {x: -1.521, y: -1.486, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -501,7 +501,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -960569942240266371, guid: f85b72f848c4eb94cab168c6ce165f26, type: 3}
+  m_Sprite: {fileID: 5515706525393940492, guid: f85b72f848c4eb94cab168c6ce165f26, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

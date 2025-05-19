@@ -13,6 +13,7 @@ public class PlayerJumpState : PlayerState
         player.jumpCount++;
         stateName = "Jump";
         player.sr.material = player.jumpMat;
+        player.ResetMaterial();
     }
 
     public override void Update()
