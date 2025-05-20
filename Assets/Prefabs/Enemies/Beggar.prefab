@@ -5445,11 +5445,11 @@ MonoBehaviour:
   lightningDamage:
     baseValue: 0
     modifiers: 
-  isIgnited: 0
+  isIgnited: 1
   isChilled: 0
   isShocked: 0
   ailmentCooldown: 0
-  shockStrikePrefab: {fileID: 0}
+  shockStrikePrefab: {fileID: 5891535613988116856, guid: 93f09611b50e8a744a2897638cace59e, type: 3}
   currentHealth: 0
   vulnerable: 0
   fadeOutDuration: 1
@@ -5481,7 +5481,7 @@ MonoBehaviour:
   shockColor:
   - {r: 0.7924528, g: 0.6700874, b: 0.20558919, a: 0}
   - {r: 0.8207547, g: 0.6474727, b: 0.17421682, a: 0}
-  igniteFx: {fileID: 0}
+  igniteFx: {fileID: 3711277046138064152}
   chillFx: {fileID: 0}
   shockFx: {fileID: 0}
   soundEffectsGroup: {fileID: 0}

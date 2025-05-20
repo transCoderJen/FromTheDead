@@ -17,11 +17,7 @@ public class HydraIdleState : EnemyState
     {
         base.Update();
         
-        if (Vector2.Distance(enemy.transform.position, PlayerManager.Instance.player.transform.position) < enemy.attackDistance)
-        {
-            stateMachine.ChangeState(enemy.attackState);
-        }
-        if (stateTimer <= 0)
+        if (stateTimer <= 0 && Vector2.Distance(enemy.transform.position, PlayerManager.Instance.player.transform.position) < enemy.shootingRange)
         {
             stateMachine.ChangeState(enemy.shootState);
         }

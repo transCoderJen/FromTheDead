@@ -56,6 +56,13 @@ public class Enemy : Entity
         
         UpdateStateText();
 
+        if (Vector2.Distance(transform.position, PlayerManager.Instance.player.transform.position) < .1f)
+        {
+            if (PlayerManager.Instance.player.GetComponent<PlayerStats>().isInvincible)
+                return;
+            GetComponent<CharacterStats>().DoDamage(PlayerManager.Instance.player.GetComponent<CharacterStats>(), true, 1, false);
+        }
+
         if (transform.position.y < -20)
             Destroy(this.gameObject);
 
@@ -144,10 +151,10 @@ public class Enemy : Entity
     protected override void OnDrawGizmos()
     {
         base.OnDrawGizmos();
-        
-        Gizmos.color = Color.yellow;
 
+        Gizmos.color = Color.yellow;
         Gizmos.DrawLine(transform.position, new Vector3(transform.position.x + attackDistance * facingDir, transform.position.y));
+        
     }
 
     private void UpdateStateText()

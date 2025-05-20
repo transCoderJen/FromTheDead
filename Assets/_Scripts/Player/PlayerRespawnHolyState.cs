@@ -10,7 +10,20 @@ public class PlayerRespawnHolyState : PlayerState
     public override void Enter()
     {
         base.Enter();
-        player.sr.material = player.respawnHolyMat;
+
+        if (Random.Range(0, 2) == 0)
+        {
+            player.anim.SetBool("respawnHoly", false);
+            player.anim.SetBool("respawnHell", true);
+            player.sr.material = player.deadMat;
+
+        }
+        else
+        {
+
+            player.sr.material = player.respawnHolyMat;
+        }
+
 
         player.transform.position = player.respawnPosition.position;
         player.ZeroVelocity();
@@ -36,6 +49,8 @@ public class PlayerRespawnHolyState : PlayerState
 
     public override void Exit()
     {
+        player.anim.SetBool("respawnHoly", false);
+        player.anim.SetBool("respawnHell", false);
         base.Exit();
     }
 }

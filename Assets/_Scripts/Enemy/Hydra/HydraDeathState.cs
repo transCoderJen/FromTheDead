@@ -1,3 +1,4 @@
+using UnityEngine;
 public class HydraDeathState : EnemyState
 {
     private EnemyHydra enemy;
@@ -10,12 +11,21 @@ public class HydraDeathState : EnemyState
     public override void Enter()
     {
         base.Enter();
-        stateName = "Death";
+
+        enemy.anim.SetBool(enemy.lastAnimBoolName, true);
+        enemy.anim.speed = 0;
+        enemy.pcd.enabled = false;
+
+        stateTimer = .1f;
+        stateName = "Dead";
     }
 
     public override void Update()
     {
         base.Update();
+
+        if (stateTimer > 0)
+            rb.linearVelocity = new Vector2(0, 10);
     }
 
     public override void Exit()

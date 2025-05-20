@@ -39,6 +39,8 @@ public class PlayerAnimationsTriggers : MonoBehaviour
 
     private void AttackTrigger2()
     {     
+        player.stats.IncreaseStatBy(10, 3f, player.stats.getStat(StatType.lightningDamage));
+
         Collider2D[] colliders = Physics2D.OverlapCircleAll(player.attackCheck2.position, player.attackCheckRadius2);
 
         foreach(var hit in colliders)
@@ -48,7 +50,9 @@ public class PlayerAnimationsTriggers : MonoBehaviour
                 EnemyStats _target = hit.GetComponent<EnemyStats>();
 
                 if (_target != null)
-                    player.stats.DoDamage(_target, true);
+                {
+                    player.stats.DoMagicDamage(_target, true);            
+                }
 
                 AudioManager.Instance.PlaySFX("Player_Attack_2");
                 //TODO WEAPON MODIFIER

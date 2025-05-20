@@ -121,8 +121,10 @@ public class AudioManager : Singleton<AudioManager>
 
     private void StopAllBGM()
     {
+        Debug.Log("Stopping all BGM");
         for (int i = 0; i < bgm.Length; i++)
         {
+            Debug.Log($"Stopping BGM {i}");
             bgm[i].Stop();
         }
     }

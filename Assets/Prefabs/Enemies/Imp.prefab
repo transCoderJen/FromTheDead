@@ -265,7 +265,7 @@ MonoBehaviour:
   isChilled: 0
   isShocked: 0
   ailmentCooldown: 0
-  shockStrikePrefab: {fileID: 0}
+  shockStrikePrefab: {fileID: 5891535613988116856, guid: 93f09611b50e8a744a2897638cace59e, type: 3}
   currentHealth: 0
   vulnerable: 0
   fadeOutDuration: 1
@@ -297,7 +297,7 @@ MonoBehaviour:
   shockColor:
   - {r: 0.7924528, g: 0.6700874, b: 0.20558919, a: 1}
   - {r: 0.8207547, g: 0.6474727, b: 0.17421682, a: 1}
-  igniteFx: {fileID: 0}
+  igniteFx: {fileID: 7735285075534646955}
   chillFx: {fileID: 0}
   shockFx: {fileID: 0}
   soundEffectsGroup: {fileID: 0}
@@ -761,5 +761,10 @@ PrefabInstance:
 --- !u!4 &3318724600734283085 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4362525227127685718, guid: cb1aa8800186a2648b2587d82d4fe64f, type: 3}
+  m_PrefabInstance: {fileID: 1334393581380417307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7735285075534646955 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8781446627717167536, guid: cb1aa8800186a2648b2587d82d4fe64f, type: 3}
   m_PrefabInstance: {fileID: 1334393581380417307}
   m_PrefabAsset: {fileID: 0}

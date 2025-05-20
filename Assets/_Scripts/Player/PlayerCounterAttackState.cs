@@ -53,6 +53,7 @@ public class PlayerCounterAttackState : PlayerState
             {
                 Debug.Log("Hit BeggShot CoutnerAttack");
                 hit.GetComponent<BeggShot>().CounterAttack();
+                player.stats.IncreaseStatBy(10, 3f, player.stats.getStat(StatType.fireDamage));
                 player.stats.ImpactEffect(.2f);
                 stateTimer = 10;
                 player.anim.SetBool("SuccessfulCounterAttack", true);

@@ -6,6 +6,10 @@ public class Lava : MonoBehaviour
     [SerializeField] private float lavaburstInterval = 5f;
     private float lavaburstTimer = 0;
 
+    [SerializeField] private float playerDamageInterval = 2f;
+    private float playerDamageTimer = 0f;
+    private Player playerInLava = null;
+
     private void Update()
     {
         lavaburstTimer += Time.deltaTime;
@@ -13,6 +17,16 @@ public class Lava : MonoBehaviour
         {
             SpawnLavaBurst();
             lavaburstTimer = 0f;
+        }
+
+        if (playerInLava != null)
+        {
+            playerDamageTimer += Time.deltaTime;
+            if (playerDamageTimer >= playerDamageInterval)
+            {
+                GetComponent<CharacterStats>().DoMagicDamage(playerInLava.stats, false);
+                playerDamageTimer = 0f;
+            }
         }
     }
 
@@ -27,15 +41,24 @@ public class Lava : MonoBehaviour
     {
         if (collision.GetComponent<Player>() != null)
         {
-            Player player = collision.GetComponent<Player>();
-            GetComponent<CharacterStats>().DoMagicDamage(player.stats, false);
-            player.stateMachine.ChangeState(player.respawnHolyState);
+            playerInLava = collision.GetComponent<Player>();
+            GetComponent<CharacterStats>().DoMagicDamage(playerInLava.stats, false);
+            playerDamageTimer = 0f;
         }
-        
+
         if (collision.GetComponent<EnemySkeleton>() != null)
         {
             EnemySkeleton enemy = collision.GetComponent<EnemySkeleton>();
             enemy.stateMachine.ChangeState(enemy.deadState);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.GetComponent<Player>() != null && playerInLava == collision.GetComponent<Player>())
+        {
+            playerInLava = null;
+            playerDamageTimer = 0f;
         }
     }
 }

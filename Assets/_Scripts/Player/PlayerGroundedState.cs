@@ -28,17 +28,21 @@ public class PlayerGroundedState : PlayerState
             // player.fx.CreateDustParticles(DustParticleType.Jump);
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1) && SkillManager.Instance.parry.CanUseSkill())
         {
             stateMachine.ChangeState(player.counterAttack);
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
             stateMachine.ChangeState(player.primaryAttack);
-            
+
         if (Input.GetKeyDown(KeyCode.E))
             SkillManager.Instance.heal.CanUseSkill();
+
+        if (Input.GetKeyDown(KeyCode.Q))
+            SkillManager.Instance.flash.CanUseSkill();
     }
+    
     public override void FixedUpdate()
     {
         base.FixedUpdate();

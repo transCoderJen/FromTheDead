@@ -15,6 +15,7 @@ public class Player : Entity
     public Material runMat;
     public Material jumpMat;
     public Material healMat;
+    public Material deadMat;
 
 
     [Header("Attack Details")]
@@ -34,11 +35,11 @@ public class Player : Entity
     [Header("Dash Info")]
     public float dashSpeed;
     public float dashDuration;
-    public float dashDir { get; private set;}
+    public float dashDir { get; private set; }
     private float defaultDashSpeed;
 
     #region Player State Machine
-    public PlayerStateMachine stateMachine { get; private set; } 
+    public PlayerStateMachine stateMachine { get; private set; }
     public PlayerIdleState idleState { get; private set; }
     public PlayerWalkState walkState { get; private set; }
     public PlayerFallState fallState { get; private set; }
@@ -48,6 +49,8 @@ public class Player : Entity
     public PlayerRespawnHolyState respawnHolyState { get; private set; }
     public PlayerCounterAttackState counterAttack { get; private set; }
     public PlayerHealState healState { get; private set; }
+    public PlayerDeadState deadState { get; private set; }
+    public PlayerFlashState flashState { get; private set; }
     #endregion
 
     [HideInInspector] public bool nextAttackQueued = false; // Flag to store input for the next attack
@@ -75,10 +78,14 @@ public class Player : Entity
         //Attack States
         primaryAttack = new PlayerPrimaryAttackState(this, stateMachine, "attack");
         counterAttack = new PlayerCounterAttackState(this, stateMachine, "counter");
-        
+
         // Skill States
         dashState = new PlayerDashState(this, stateMachine, "dash");
         healState = new PlayerHealState(this, stateMachine, "heal");
+        flashState = new PlayerFlashState(this, stateMachine, "flash");
+
+        //Dead State
+        deadState = new PlayerDeadState(this, stateMachine, "dead");
 
         pulseIntensity = GetComponent<PulseIntensity>();
     }
@@ -107,11 +114,22 @@ public class Player : Entity
     protected override void Update()
     {
         base.Update();
+        
+        
 
+
+        if (isDead)
+            return;
+
+        if (stats.currentHealth < 0)
+            Die();
+            
         stateMachine.currentState.Update();
         CheckForDashInput();
         //Debugging
         UpdateStateText();
+
+        
 
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -131,8 +149,8 @@ public class Player : Entity
     {
         if (IsWallDetected())
             return;
-    
-            
+
+
         if (Input.GetKeyDown(KeyCode.LeftShift) && SkillManager.Instance.dash.CanUseSkill())
         {
             dashDir = Input.GetAxisRaw("Horizontal");
@@ -148,5 +166,12 @@ public class Player : Entity
         pulseIntensity.ResetMaterial();
     }
 
-   public void AnimationTrigger() => stateMachine.currentState.AnimationFinishTrigger();
+    public void AnimationTrigger() => stateMachine.currentState.AnimationFinishTrigger();
+
+    public override void Die()
+    {
+        base.Die();
+        Debug.Log("Player is dead");
+        stateMachine.ChangeState(deadState);
+    }
 }

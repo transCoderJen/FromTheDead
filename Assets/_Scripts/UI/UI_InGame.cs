@@ -1,14 +1,15 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class UI_InGame : MonoBehaviour
+public class UI_InGame : Singleton<UI_InGame>
 {
     [Header("UI Elements")]
     [SerializeField] private Slider slider;
     public GameObject gameOverPanel;
     public GameObject pausePanel;
-
     private PlayerStats playerStats;
 
     private void Start()
@@ -18,12 +19,23 @@ public class UI_InGame : MonoBehaviour
             playerStats.onHealthChanged += UpdateHealthUI;
     }
 
-    private void Update()
+    void Update()
     {
-        if (playerStats.currentHealth <= 0)
+        if (PlayerManager.Instance.player.isDead && !gameOverPanel.activeSelf)
         {
-            gameOverPanel.SetActive(true);
+            StartCoroutine(WaitForGameOver());
         }
+    }
+
+    private IEnumerator WaitForGameOver()
+    {
+        yield return Helpers.GetWait(2f);
+        OnGameOver();
+    }
+
+    public void OnGameOver()
+    {
+        gameOverPanel.SetActive(true);
     }
 
     public void OnPauseButtonClicked()
@@ -37,10 +49,16 @@ public class UI_InGame : MonoBehaviour
         slider.maxValue = playerStats.GetMaxHealthValue();
         slider.value = playerStats.currentHealth;
     }
-    
+
     public void RestartGame()
     {
         gameOverPanel.SetActive(false);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        AudioManager.Instance.playBGM = true;
+        PlayerManager.Instance.player.isDead = false;
+        PlayerManager.Instance.player.stats.ResetStats();
+
+        // PlayerManager.Instance.player.transform.position = PlayerManager.Instance.player.respawnPosition.position;
+        PlayerManager.Instance.player.stateMachine.ChangeState(PlayerManager.Instance.player.respawnHolyState);
     }
 }

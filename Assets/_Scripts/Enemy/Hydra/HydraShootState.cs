@@ -40,7 +40,7 @@ public class HydraShootState : EnemyState
         bool fireball = Random.value > 0.5f ? true : false;
         
 
-        for (int i = 0; i < Random.Range(1,5); i++)
+        for (int i = 0; i < Random.Range(3,6); i++)
         {
             if (fireball)
                 enemy.CreateProjectile(enemy.projectileSpawnPoint.position, enemy.transform.rotation);

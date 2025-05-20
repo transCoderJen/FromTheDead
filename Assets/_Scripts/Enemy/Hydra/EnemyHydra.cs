@@ -16,6 +16,8 @@ public class EnemyHydra : Enemy
 
     #endregion
 
+    [SerializeField] public float shootingRange;
+
     protected override void Awake()
     {
         base.Awake();
@@ -37,6 +39,13 @@ public class EnemyHydra : Enemy
     protected override void Update()
     {
         base.Update();
+        Debug.Log(Vector2.Distance(transform.position, attackCheck.transform.position));
+
+        float distanceToPlayer = Vector2.Distance(attackCheck.transform.position, PlayerManager.Instance.player.transform.position);
+        if (distanceToPlayer <= attackDistance)
+        {
+            stateMachine.ChangeState(attackState);
+        }
     }
 
     public override bool CanBeStunned()
@@ -85,6 +94,14 @@ public class EnemyHydra : Enemy
         Vector3 spikePosition = new Vector3(playerPosition.x, groundY, playerPosition.z);
         GameObject spike = Instantiate(spikePrefab, spikePosition, Quaternion.identity);
         spike.GetComponentInChildren<HydraSpike>().Initialize(this);
+    }
+
+    protected override void OnDrawGizmos()
+    {
+        base.OnDrawGizmos();
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, shootingRange);
+
     }
 }
 

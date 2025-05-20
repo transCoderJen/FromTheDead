@@ -15,6 +15,7 @@ public class Entity : MonoBehaviour
     public SpriteRenderer sr { get; private set; } 
     public CharacterStats stats { get; private set; }
     public CapsuleCollider2D cd { get; private set; }
+    public PolygonCollider2D pcd { get; private set; }
     #endregion
 
 
@@ -50,16 +51,8 @@ public class Entity : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
         stats = GetComponent<CharacterStats>();
-        if (GetComponent<CapsuleCollider2D>() == null)
-        {
-            PolygonCollider2D cd;
-            cd = GetComponent<PolygonCollider2D>();
-        }
-        else
-        {
-            
-            cd = GetComponent<CapsuleCollider2D>();
-        }
+        cd = GetComponent<CapsuleCollider2D>();
+        pcd = GetComponent<PolygonCollider2D>();
     }
 
     public virtual void SlowEntityBy(float _slowPercentage, float _slowDuration)
