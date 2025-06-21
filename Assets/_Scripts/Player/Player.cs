@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class Player : Entity
 {
+    [SerializeField] private bool isClone = false;
+    public PlayerControlller playerControls;
+    public SkillManager skill { get; private set; }
+
     [Header("Materials")]
     public Material idleMat;
     public Material attack1Mat;
@@ -16,6 +20,7 @@ public class Player : Entity
     public Material jumpMat;
     public Material healMat;
     public Material deadMat;
+    public Material laserMat;
 
 
     [Header("Attack Details")]
@@ -27,9 +32,12 @@ public class Player : Entity
     public float moveSpeed = 8f;
     public float jumpForce;
     public int jumpCount = 0;
+    public int jumpsAllowed = 2;
     public float coyoteTimeDuration;
     private float defaultMoveSpeed;
     private float defaultJumpForce;
+    public float apexHangTime;
+    public float swordReturnImpact;
 
 
     [Header("Dash Info")]
@@ -37,6 +45,8 @@ public class Player : Entity
     public float dashDuration;
     public float dashDir { get; private set; }
     private float defaultDashSpeed;
+
+    public GameObject sword { get; private set; }
 
     #region Player State Machine
     public PlayerStateMachine stateMachine { get; private set; }
@@ -51,6 +61,9 @@ public class Player : Entity
     public PlayerHealState healState { get; private set; }
     public PlayerDeadState deadState { get; private set; }
     public PlayerFlashState flashState { get; private set; }
+    public PlayerLaserState laserState { get; private set; }
+    public PlayerAimSwordState aimSword { get; private set; }
+    public PlayerCatchSwordState catchSword { get; private set; }
     #endregion
 
     [HideInInspector] public bool nextAttackQueued = false; // Flag to store input for the next attack
@@ -59,10 +72,10 @@ public class Player : Entity
 
     private PulseIntensity pulseIntensity;
 
-
     protected override void Awake()
     {
         base.Awake();
+        playerControls = new PlayerControlller();
 
         stateMachine = new PlayerStateMachine();
 
@@ -83,23 +96,48 @@ public class Player : Entity
         dashState = new PlayerDashState(this, stateMachine, "dash");
         healState = new PlayerHealState(this, stateMachine, "heal");
         flashState = new PlayerFlashState(this, stateMachine, "flash");
+        laserState = new PlayerLaserState(this, stateMachine, "laser");
+        aimSword = new PlayerAimSwordState(this, stateMachine, "AimSword");
+        catchSword = new PlayerCatchSwordState(this, stateMachine, "CatchSword");
 
         //Dead State
         deadState = new PlayerDeadState(this, stateMachine, "dead");
 
         pulseIntensity = GetComponent<PulseIntensity>();
+
+        playerControls.Player.Dash.performed += ctx => Dash();
     }
 
     protected override void Start()
     {
         base.Start();
-        stateMachine.Initialize(respawnHolyState);
+
+        skill = SkillManager.Instance;
+
+        if (!isClone)
+        {
+            stateMachine.Initialize(respawnHolyState);
+        }
+        else
+        {
+            stateMachine.Initialize(idleState);
+        }
 
         defaultMoveSpeed = moveSpeed;
         defaultJumpForce = jumpForce;
         defaultDashSpeed = dashSpeed;
 
         fx = GetComponent<PlayerFX>();
+    }
+
+    void OnEnable()
+    {
+        playerControls.Enable();
+    }
+
+    void OnDisable()
+    {
+        playerControls.Disable();
     }
 
     public IEnumerator BusyFor(float _seconds)
@@ -114,44 +152,36 @@ public class Player : Entity
     protected override void Update()
     {
         base.Update();
-        
-        
-
 
         if (isDead)
             return;
 
         if (stats.currentHealth < 0)
             Die();
-            
+
         stateMachine.currentState.Update();
-        CheckForDashInput();
+
         //Debugging
         UpdateStateText();
-
-        
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            pulseIntensity.TriggerPulse();
-        }
     }
 
     private void UpdateStateText()
     {
-        return;
+        if (debugStateText == null)
+            return;
+
         debugStateText.text = stateMachine.currentStateName;
 
         debugStateText.GetComponent<Transform>().position = transform.position + new Vector3(0, 2, 0);
     }
 
-    private void CheckForDashInput()
+    private void Dash()
     {
         if (IsWallDetected())
             return;
 
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && SkillManager.Instance.dash.CanUseSkill())
+        if (SkillManager.Instance.dash.CanUseSkill())
         {
             dashDir = Input.GetAxisRaw("Horizontal");
 
@@ -173,5 +203,21 @@ public class Player : Entity
         base.Die();
         Debug.Log("Player is dead");
         stateMachine.ChangeState(deadState);
+    }
+
+    public void GeneratePulse()
+    {
+        pulseIntensity.TriggerPulse();
+    }
+
+    public void AssignNewSword(GameObject _newSword)
+    {
+        sword = _newSword;
+    }
+    
+    public void CatchSword()
+    {
+        stateMachine.ChangeState(catchSword);
+        Destroy(sword);
     }
 }

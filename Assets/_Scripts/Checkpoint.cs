@@ -36,6 +36,7 @@ public class Checkpoint : MonoBehaviour
         AudioManager.Instance.PlaySFX("Checkpoint");
         PlayerManager.Instance.player.respawnPosition = transform;
         PlayerManager.Instance.player.stats.IncreaseHealthBy(1000);
+        PlayerManager.Instance.player.GeneratePulse();
         activated = true;
         GetComponent<SpriteRenderer>().material = checkpointMat;
         anim.SetBool("Activating", true);

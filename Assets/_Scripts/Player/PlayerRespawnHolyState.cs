@@ -10,6 +10,8 @@ public class PlayerRespawnHolyState : PlayerState
     public override void Enter()
     {
         base.Enter();
+        AudioManager.Instance.StopBossMusic();
+        
 
         if (Random.Range(0, 2) == 0)
         {

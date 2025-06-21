@@ -31,6 +31,8 @@ public class EnemyState
 
     public virtual void Update()
     {
+        if (UI.Instance.IsMenuOpened())
+            return;
         stateTimer -= Time.deltaTime;
     }
 

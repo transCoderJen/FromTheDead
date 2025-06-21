@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Skill : MonoBehaviour
 {
-    public float cooldown;
+    [HideInInspector] public float cooldown;
     protected float cooldownTimer;
     protected Player player;
     // public UI_InGame inGameUI;
@@ -21,6 +21,8 @@ public class Skill : MonoBehaviour
 
     public virtual bool CanUseSkill(bool _useSkill = true)
     {
+        Debug.Log(cooldownTimer < 0);
+
         if (cooldownTimer < 0)
         {
             if (_useSkill)

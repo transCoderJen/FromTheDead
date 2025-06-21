@@ -7,6 +7,7 @@ public class AudioManager : Singleton<AudioManager>
     [SerializeField] private float sfxMinimumDistance;
     [SerializeField] private AudioSource[] sfx;
     [SerializeField] private AudioSource[] bgm;
+    [SerializeField] private AudioSource[] bossMusic;
 
     public bool playBGM;
     private int bgmIndex;
@@ -20,11 +21,13 @@ public class AudioManager : Singleton<AudioManager>
         PopulateSFXDictionary();
         if (!gameObject.transform.parent)
             DontDestroyOnLoad(this.gameObject);
+        // bgmStarted = true;
     }
 
     private void Start()
     {
-        bgmStarted = true;
+
+        PlayRandomBGM();
     }
 
     private void PopulateSFXDictionary()
@@ -37,7 +40,6 @@ public class AudioManager : Singleton<AudioManager>
             }
         }
     }
-
     public void PlaySFX(string sfxName, Transform source = null)
     {
         if (sfxDictionary.TryGetValue(sfxName, out int index))
@@ -47,7 +49,14 @@ public class AudioManager : Singleton<AudioManager>
                 return;
             }
 
+            // Always randomize pitch before playing
             sfx[index].pitch = Random.Range(.85f, 1.15f);
+
+            // If looping, stop and play again to apply new pitch
+            if (sfx[index].loop && sfx[index].isPlaying)
+            {
+                sfx[index].Stop();
+            }
             sfx[index].Play();
         }
         else
@@ -119,6 +128,18 @@ public class AudioManager : Singleton<AudioManager>
         bgm[bgmIndex].Play();
     }
 
+    public void PlayBossMusic()
+    {
+        StopAllBGM();
+        bossMusic[0].Play();
+    }
+
+    public void StopBossMusic()
+    {
+        bossMusic[0].Stop();
+        playBGM = true;
+    }
+
     private void StopAllBGM()
     {
         Debug.Log("Stopping all BGM");
@@ -128,4 +149,35 @@ public class AudioManager : Singleton<AudioManager>
             bgm[i].Stop();
         }
     }
+
+    public void PauseAllSFX()
+    {
+        for (int i = 0; i < sfx.Length; i++)
+        {
+            if (sfx[i].isPlaying)
+            {
+                sfx[i].Pause();
+            }
+        }
+    }
+
+    public void PlayNextBGM()
+    {
+        bgmIndex += 1;
+        if (bgmIndex > bgm.Length - 1)
+            bgmIndex = 0;
+        PlayBGM(bgmIndex);
+    }
+
+    public void ResumeAllSFX()
+    {
+        for (int i = 0; i < sfx.Length; i++)
+        {
+            if (sfx[i].isPlaying)
+            {
+                sfx[i].UnPause();
+            }
+        }
+    }
+
 }

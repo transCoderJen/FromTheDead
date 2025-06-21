@@ -16,6 +16,7 @@ public class SobberBattleState : EnemyState
     public override void Enter()
     {
         base.Enter();
+        AudioManager.Instance.PlaySFX("wingFlap", this.enemy.transform);
     }
 
 

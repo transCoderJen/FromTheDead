@@ -1,3 +1,6 @@
+using System.Data;
+using UnityEngine;
+
 public class EnemySkeleton : Enemy
 {
     #region States
@@ -29,9 +32,25 @@ public class EnemySkeleton : Enemy
         stateMachine.Initialize(idleState);
     }
 
+    private bool isLightOn = false;
+
     protected override void Update()
     {
         base.Update();
+
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            var pulse = GetComponent<PulseIntensity>();
+            if (isLightOn)
+            {
+                pulse.LightOff();
+            }
+            else
+            {
+                pulse.LightOn();
+            }
+            isLightOn = !isLightOn;
+        }
     }
 
     public override bool CanBeStunned()

@@ -26,6 +26,7 @@ public class DashSkill : Skill
     protected override void Start()
     {
         base.Start();
+        cooldown = SkillCooldowns.Instance.dash;
 
         // dashUnlockButton.OnFullyFilled += UnlockDash;
         // cloneOnDashUnlockButton.OnFullyFilled += UnlockCloneOnDash;

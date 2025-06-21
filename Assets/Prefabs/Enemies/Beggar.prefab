@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2061806720155769285}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: ParticleFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 242183402307615245}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 39272332236177341}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6653162463277799441}
   - component: {fileID: 498547405287883977}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Counter Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3040748286029283}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Checks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6374815820340982845}
   - component: {fileID: 6066439496912486272}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 5848957769168858000}
   - component: {fileID: 868340619515701335}
   - component: {fileID: 6197397813379726210}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 268743494927032021}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: AttackCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -465,7 +465,7 @@ GameObject:
   - component: {fileID: 8403829247673315980}
   - component: {fileID: 3711277046138064152}
   - component: {fileID: 1871342338388396304}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: IgniteFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5301,7 +5301,7 @@ GameObject:
   - component: {fileID: 7594806533010251212}
   - component: {fileID: 5398097619379632770}
   - component: {fileID: 7087959702636873329}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Beggar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5445,11 +5445,11 @@ MonoBehaviour:
   lightningDamage:
     baseValue: 0
     modifiers: 
-  isIgnited: 1
+  isIgnited: 0
   isChilled: 0
   isShocked: 0
-  ailmentCooldown: 0
-  shockStrikePrefab: {fileID: 5891535613988116856, guid: 93f09611b50e8a744a2897638cace59e, type: 3}
+  ailmentCooldown: 1
+  shockStrikePrefab: {fileID: 5499952005911890495, guid: 339fe7cc9ec85314999311b192722ee2, type: 3}
   currentHealth: 0
   vulnerable: 0
   fadeOutDuration: 1
@@ -5474,13 +5474,13 @@ MonoBehaviour:
   hitMat: {fileID: 2100000, guid: f13d85c33b1e5ba4c9c7d3bf2490cf4c, type: 2}
   flashDuration: 0.02
   flashCount: 4
-  chillColor: {r: 0, g: 0, b: 0, a: 0}
+  chillColor: {r: 0.15619439, g: 0.19025087, b: 0.8490566, a: 1}
   igniteColor:
-  - {r: 0.8301887, g: 0.14489143, b: 0.14489143, a: 0}
-  - {r: 0.8867924, g: 0.39576998, b: 0.24679601, a: 0}
+  - {r: 0.8301887, g: 0.14489143, b: 0.14489143, a: 1}
+  - {r: 0.8867924, g: 0.39576998, b: 0.24679601, a: 1}
   shockColor:
-  - {r: 0.7924528, g: 0.6700874, b: 0.20558919, a: 0}
-  - {r: 0.8207547, g: 0.6474727, b: 0.17421682, a: 0}
+  - {r: 0.7924528, g: 0.6700874, b: 0.20558919, a: 1}
+  - {r: 0.8207547, g: 0.6474727, b: 0.17421682, a: 1}
   igniteFx: {fileID: 3711277046138064152}
   chillFx: {fileID: 0}
   shockFx: {fileID: 0}

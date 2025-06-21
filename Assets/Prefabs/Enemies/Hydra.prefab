@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1625522697201897043}
   - component: {fileID: 8305083208157957520}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Spike_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5757576690089958017}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4855266850659283447}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Head+Jaw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2923378751651589307}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1849495708605253639}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8799194902305948310}
   - component: {fileID: 1873288509368943949}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Jaw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5634376693646358449}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: ProjectileSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7745243884504014714}
   - component: {fileID: 7443490619130204524}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2169944478338035049}
   - component: {fileID: 674267608357633003}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Spike_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,7 +523,7 @@ GameObject:
   - component: {fileID: 4465345495603352464}
   - component: {fileID: 5823125596941004924}
   - component: {fileID: 3306349084245908550}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Hydra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,7 +566,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5.92
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -701,8 +701,8 @@ MonoBehaviour:
   isIgnited: 0
   isChilled: 0
   isShocked: 0
-  ailmentCooldown: 0
-  shockStrikePrefab: {fileID: 5891535613988116856, guid: 93f09611b50e8a744a2897638cace59e, type: 3}
+  ailmentCooldown: 2
+  shockStrikePrefab: {fileID: 5499952005911890495, guid: 339fe7cc9ec85314999311b192722ee2, type: 3}
   currentHealth: 0
   vulnerable: 0
   fadeOutDuration: 1
@@ -732,8 +732,8 @@ MonoBehaviour:
   - {r: 0.8207547, g: 0.019357419, b: 0.019357419, a: 1}
   - {r: 0.8679245, g: 0.29487222, b: 0.118725546, a: 1}
   shockColor:
-  - {r: 0.8584906, g: 0.7061761, b: 0.11743506, a: 0}
-  - {r: 0.85882354, g: 0.4631784, b: 0.117647074, a: 0}
+  - {r: 0.8584906, g: 0.7061761, b: 0.11743506, a: 1}
+  - {r: 0.85882354, g: 0.4631784, b: 0.117647074, a: 1}
   igniteFx: {fileID: 4945201040081088594}
   chillFx: {fileID: 0}
   shockFx: {fileID: 0}
@@ -796,7 +796,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6314319847669956324}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: AttackCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -828,7 +828,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8383453175725659980}
   - component: {fileID: 7102602457803581625}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -915,7 +915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1133954682008814944}
   - component: {fileID: 4982172401020427468}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Spike_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1001,7 +1001,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4687028680487965655}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: ParticleFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1034,7 +1034,7 @@ GameObject:
   m_Component:
   - component: {fileID: 589646117638073071}
   - component: {fileID: 4310562638969513480}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Spike_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1121,7 +1121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3445238209485878285}
   - component: {fileID: 8045022627388293015}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1208,7 +1208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1950530410387083885}
   - component: {fileID: 1706924649947127271}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: hits-2-7-imageonline.co-merged_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1296,7 +1296,7 @@ GameObject:
   - component: {fileID: 2964184158448058954}
   - component: {fileID: 4920513173743372669}
   - component: {fileID: 5569799849448103788}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1408,6 +1408,10 @@ PrefabInstance:
     - target: {fileID: 6252351558573860745, guid: cb1aa8800186a2648b2587d82d4fe64f, type: 3}
       propertyPath: m_Name
       value: IgniteFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252351558573860745, guid: cb1aa8800186a2648b2587d82d4fe64f, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

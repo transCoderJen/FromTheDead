@@ -122,6 +122,7 @@ public class Enemy : Entity
     public virtual void OpenCounterAttackWindow()
     {
         canBeStunned = true;
+        GetComponent<PulseIntensity>().TriggerPulse();
         counterImage.SetActive(true);
     }
 

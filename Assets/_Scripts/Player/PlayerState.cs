@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class PlayerState
 {
@@ -36,11 +33,15 @@ public class PlayerState
     }
 
     public virtual void Update() {
+        if (UI.Instance.IsMenuOpened())
+            return;
+
         stateTimer -= Time.deltaTime;
         afterImageTimer += Time.deltaTime;
 
-        xInput = Input.GetAxisRaw("Horizontal");
-        yInput = Input.GetAxisRaw("Vertical");
+        // xInput = Input.GetAxisRaw("Horizontal");
+        // yInput = Input.GetAxisRaw("Vertical");
+        PlayerInput();
 
         player.anim.SetFloat("yVelocity", rb.linearVelocity.y);
 
@@ -48,11 +49,20 @@ public class PlayerState
             stateMachine.ChangeState(player.respawnHolyState);
     }
 
+    private void PlayerInput()
+    {
+        xInput = player.playerControls.Player.Move.ReadValue<Vector2>().x;
+        yInput = player.playerControls.Player.Move.ReadValue<Vector2>().y;
+    }
+
     public virtual void FixedUpdate() {
 
     }
+    
+    
 
-    public virtual void Exit() {
+    public virtual void Exit()
+    {
         player.anim.SetBool(animBoolName, false);
     }
 
@@ -64,8 +74,6 @@ public class PlayerState
     public string GetAnimBoolName()
     {
         return animBoolName;
-
-
     }
 
     protected void CreateTrailAfterImage()

@@ -5,6 +5,7 @@ using System.Collections;
 
 using TMPro;
 using UnityEngine;
+using UnityEngine.Android;
 using UnityEngine.Audio;
 
 using Random = UnityEngine.Random;
@@ -58,13 +59,19 @@ public class EntityFX : MonoBehaviour
 
         burningAudio = gameObject.AddComponent<AudioSource>();
         burningAudio.clip = AudioManager.Instance.getSFXAudioSource("burning").clip;
-        burningAudio.outputAudioMixerGroup = soundEffectsGroup;  
+        burningAudio.outputAudioMixerGroup = soundEffectsGroup;
+        burningAudio.volume = .3f;
     }
 
 
     
     public void CreatePopUpText(string _text)
     {
+        if (UI.Instance.IsPopupTextEnabled() == false)
+        {
+            return;
+        }
+        
         float randomX = Random.Range(-.5f,.5f);
         float randomY = Random.Range(1, 3);
 
@@ -139,14 +146,9 @@ public class EntityFX : MonoBehaviour
         }
     }
 
-    [ContextMenu("Test Ignite FX")]
-    public void TestIgniteFX()
-    {
-        IgniteFxFor(2);
-    }
-
     public void IgniteFxFor(float _seconds)
     {
+
         Debug.Log("Ignite FX");
         igniteFx.Play();
         burningAudio.Play();
@@ -156,10 +158,14 @@ public class EntityFX : MonoBehaviour
 
     public void ChillFxFor(float _seconds)
     {
-        chillFx.Play();
+        
+        //TODO Add ChillFX
+        // chillFx.Play();
 
         foreach (SpriteRenderer sr in srs)
         {
+
+            // TODO FIX CHILL COLOR CHANGE IN SPRITE RENDERER
             sr.color = chillColor;
         }
         Invoke("CancelColorChange", _seconds);
@@ -167,6 +173,7 @@ public class EntityFX : MonoBehaviour
 
     public void ShockFxFor(float _seconds)
     {
+        //TODO Shock ChillFX
         // shockFx.Play();
         InvokeRepeating("ShockColorFX", 0, .15f);
         Invoke("CancelColorChange", _seconds);
@@ -229,6 +236,7 @@ public class EntityFX : MonoBehaviour
     private void StopAllParticleFx()
     {
         igniteFx.Stop();
+        // TODO Enable after adding chill and shockFX
         // chillFx.Stop();
         // shockFx.Stop();
     }

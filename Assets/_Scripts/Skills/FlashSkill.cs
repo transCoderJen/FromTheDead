@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class FlashSkill : Skill
 {
+    protected override void Start()
+    {
+        base.Start();
+        cooldown = SkillCooldowns.Instance.flash;
+    }
+    
     public override bool CanUseSkill(bool _useSkill = true)
     {
         return base.CanUseSkill(_useSkill);

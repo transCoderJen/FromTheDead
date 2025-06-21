@@ -12,6 +12,7 @@ public class SobberDeadState : EnemyState
     public override void Enter()
     {
         base.Enter();
+        AudioManager.Instance.StopSFX("wingFlap");
 
         enemy.anim.SetBool(enemy.lastAnimBoolName, true);
         enemy.anim.speed = 0;
@@ -31,7 +32,7 @@ public class SobberDeadState : EnemyState
 
     public override void Exit()
     {
-        base.Exit();
         
+        base.Exit();
     }
 }

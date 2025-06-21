@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9206531137521691131}
   - component: {fileID: 7873227394446865020}
   - component: {fileID: 4549140785938788127}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 9152698903338277517}
   - component: {fileID: 5111653407157595343}
   - component: {fileID: 3751155292976722531}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Sobber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   maxHealth:
-    baseValue: 0
+    baseValue: 1
     modifiers: 
   armor:
     baseValue: 0
@@ -270,8 +270,8 @@ MonoBehaviour:
   isIgnited: 0
   isChilled: 0
   isShocked: 0
-  ailmentCooldown: 0
-  shockStrikePrefab: {fileID: 5891535613988116856, guid: 93f09611b50e8a744a2897638cace59e, type: 3}
+  ailmentCooldown: 1
+  shockStrikePrefab: {fileID: 5499952005911890495, guid: 339fe7cc9ec85314999311b192722ee2, type: 3}
   currentHealth: 0
   vulnerable: 0
   fadeOutDuration: 1
@@ -414,7 +414,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5365447048271095213}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,6 +488,10 @@ PrefabInstance:
     - target: {fileID: 6252351558573860745, guid: cb1aa8800186a2648b2587d82d4fe64f, type: 3}
       propertyPath: m_Name
       value: IgniteFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252351558573860745, guid: cb1aa8800186a2648b2587d82d4fe64f, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

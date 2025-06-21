@@ -22,5 +22,14 @@ public class BeggarIdleState : EnemyState
         {
             stateMachine.ChangeState(enemy.attackState);
         }
+
+        if (PlayerManager.Instance.player.transform.position.x < enemy.transform.position.x && enemy.facingDir != -1)
+        {
+            enemy.Flip();
+        }
+        else if(PlayerManager.Instance.player.transform.position.x > enemy.transform.position.x && enemy.facingDir != 1)
+        {
+            enemy.Flip();
+        }
     }
 }

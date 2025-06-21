@@ -12,6 +12,7 @@ public class PlayerDeadState : PlayerState
         player.ResetMaterial();
         stateTimer = 2;
         player.ZeroVelocity();
+        AudioManager.Instance.PlaySFX("Player_Dead");
     }
 
     public override void Update()

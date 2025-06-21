@@ -258,18 +258,18 @@ public class CharacterStats : MonoBehaviour
         bool canApplyChill = _iceDamage > _fireDamage && _iceDamage > _lightningDamage;
         bool canApplyShock = _lightningDamage > _fireDamage && _lightningDamage > _iceDamage;
 
-        // if ((_fireDamage > 0 || _iceDamage > 0 || _lightningDamage > 0) && !canApplyIgnite && !canApplyChill && !canApplyShock)
-        // {
-        //     System.Random random = new System.Random();
-        //     int choice = random.Next(3);
+        if ((_fireDamage > 0 || _iceDamage > 0 || _lightningDamage > 0) && !canApplyIgnite && !canApplyChill && !canApplyShock)
+        {
+            System.Random random = new System.Random();
+            int choice = random.Next(3);
 
-        //     if (choice == 0)
-        //         canApplyIgnite = true;
-        //     else if (choice == 1)
-        //         canApplyChill = true;
-        //     else
-        //         canApplyShock = true;
-        // }
+            if (choice == 0)
+                canApplyIgnite = true;
+            else if (choice == 1)
+                canApplyChill = true;
+            else
+                canApplyShock = true;
+        }
 
         if (canApplyIgnite)
             _targetStats.SetupIgniteDamage(Mathf.RoundToInt(_fireDamage * .2f));
@@ -302,6 +302,7 @@ public class CharacterStats : MonoBehaviour
             float _slowPercentage = .35f;
 
             GetComponent<Entity>().SlowEntityBy(_slowPercentage, ailmentCooldown);
+            Debug.Log("Chill fx called");
             fx.ChillFxFor(ailmentCooldown);
         }
 
@@ -311,25 +312,27 @@ public class CharacterStats : MonoBehaviour
             shockedTimer = ailmentCooldown;
 
             fx.ShockFxFor(ailmentCooldown);
+
             GameObject newShockStrike = Instantiate(shockStrikePrefab, transform);
-            // newShockStrike.GetComponent<ShockStrikeController>().Setup(1, this);
+            
+            newShockStrike.GetComponent<ShockStrikeController>().Setup(1, this);
 
-            // List<CharacterStats> targetedEnemies = new List<CharacterStats>();
+            List<CharacterStats> targetedEnemies = new List<CharacterStats>();
 
-            // targetedEnemies = FindClosestTargets();
+            targetedEnemies = FindClosestTargets();
 
-            // if (targetedEnemies != null)
-            // {
+            if (targetedEnemies != null)
+            {
 
-            //     if (targetedEnemies.Count > 0)
-            //     {
-            //         for (int i = 0; i < targetedEnemies.Count; i++)
-            //         {
-            //             GameObject enemyShockStrike = Instantiate(shockStrikePrefab, transform);
-            //             enemyShockStrike.GetComponent<ShockStrikeController>().Setup(1, targetedEnemies[i]);
-            //         }
-            //     }
-            // }
+                if (targetedEnemies.Count > 0)
+                {
+                    for (int i = 0; i < targetedEnemies.Count; i++)
+                    {
+                        GameObject enemyShockStrike = Instantiate(shockStrikePrefab, transform);
+                        enemyShockStrike.GetComponent<ShockStrikeController>().Setup(1, targetedEnemies[i]);
+                    }
+                }
+            }
         }
     }
 

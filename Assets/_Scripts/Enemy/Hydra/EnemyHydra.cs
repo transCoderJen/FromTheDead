@@ -39,7 +39,6 @@ public class EnemyHydra : Enemy
     protected override void Update()
     {
         base.Update();
-        Debug.Log(Vector2.Distance(transform.position, attackCheck.transform.position));
 
         float distanceToPlayer = Vector2.Distance(attackCheck.transform.position, PlayerManager.Instance.player.transform.position);
         if (distanceToPlayer <= attackDistance)

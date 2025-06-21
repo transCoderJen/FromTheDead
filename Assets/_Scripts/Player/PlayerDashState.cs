@@ -51,6 +51,9 @@ public class PlayerDashState : PlayerState
         AudioManager.Instance.PlaySFX("Player_Dash"); // Play the dash sound effect
         player.ResetMaterial();
         player.stats.MakeInvincible(true);
+
+        // TODO // Ignore collisions between the player and enemies during the dash
+        Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), true);
     }
 
     /// <summary>
@@ -67,6 +70,8 @@ public class PlayerDashState : PlayerState
         }
         // player.skill.dash.CloneOnArrival(); // Trigger the skill effect for cloning on arrival
         player.stats.MakeInvincible(false);
+
+
         base.Exit();
     }
 
@@ -88,8 +93,8 @@ public class PlayerDashState : PlayerState
 
         // Apply dash movement
         player.SetVelocity(player.dashSpeed * player.dashDir, 0);
-        
-        if (player.IsGroundDetected() && Input.GetKeyDown(KeyCode.Space))
+
+        if (player.IsGroundDetected() && player.playerControls.Player.Jump.triggered)
         {
             player.fx.CreateDustParticles(DustParticleType.Landing);
             player.fx.ScreenShake(player.fx.lightShakePower);
@@ -105,5 +110,6 @@ public class PlayerDashState : PlayerState
     public override void FixedUpdate()
     {
         base.FixedUpdate();
+        Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), false);
     }
 }

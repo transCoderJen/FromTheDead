@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5029843866600164975}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: AttackCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7314476708892640569}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,9 @@ GameObject:
   - component: {fileID: 646706221394072933}
   - component: {fileID: 1401830664904137380}
   - component: {fileID: 4944490432090566546}
-  m_Layer: 7
+  - component: {fileID: 6986854604181179872}
+  - component: {fileID: 1785844381187215151}
+  m_Layer: 10
   m_Name: Imp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugStateText: {fileID: 0}
-  knockbackDirection: {x: 10, y: 5}
+  knockbackDirection: {x: 5, y: 5}
   knockbackDuration: 0.2
   attackCheck: {fileID: 5029843866600164975}
   attackCheckRadius: 0.99
@@ -264,8 +266,8 @@ MonoBehaviour:
   isIgnited: 0
   isChilled: 0
   isShocked: 0
-  ailmentCooldown: 0
-  shockStrikePrefab: {fileID: 5891535613988116856, guid: 93f09611b50e8a744a2897638cace59e, type: 3}
+  ailmentCooldown: 2
+  shockStrikePrefab: {fileID: 5499952005911890495, guid: 339fe7cc9ec85314999311b192722ee2, type: 3}
   currentHealth: 0
   vulnerable: 0
   fadeOutDuration: 1
@@ -290,7 +292,7 @@ MonoBehaviour:
   hitMat: {fileID: 2100000, guid: f13d85c33b1e5ba4c9c7d3bf2490cf4c, type: 2}
   flashDuration: 0.02
   flashCount: 4
-  chillColor: {r: 0, g: 0, b: 0, a: 1}
+  chillColor: {r: 0.10457456, g: 0.23141578, b: 0.8867924, a: 1}
   igniteColor:
   - {r: 0.8301887, g: 0.14489143, b: 0.14489143, a: 1}
   - {r: 0.8867924, g: 0.39576998, b: 0.24679601, a: 1}
@@ -305,6 +307,37 @@ MonoBehaviour:
   critHitFxPrefab: {fileID: 1317785407803777038, guid: 75123df1d8a17fe44ad74e20c87c9d8d, type: 3}
   runningdDustFx: {fileID: 0}
   landingDustFx: {fileID: 0}
+--- !u!114 &6986854604181179872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6090996530677069777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f95f4cea239b434492b31b9dc5c56ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTrigger: 1
+  minBloomIntensity: 1
+  maxBloomIntensity: 18
+  speed: 2
+  pulseDuration: 0.4
+--- !u!114 &1785844381187215151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6090996530677069777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff206f8b54375848b7f7fff529c2b14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hotkeyPrefab: {fileID: 830085535470180902, guid: 07821cd6a26fbfa4f839f49460ee41ac, type: 3}
+  keyCodeList: 660000007200000063000000780000007a000000
 --- !u!1 &6119589990224056483
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +347,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2437313163576971081}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4780928431571700441}
   - component: {fileID: 177063237061639344}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Counter Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +395,7 @@ Transform:
   m_GameObject: {fileID: 7278782040266266717}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.27000028, y: 1.03, z: 0}
+  m_LocalPosition: {x: -0.14, y: 0.857, z: 0}
   m_LocalScale: {x: 0.4621, y: 0.4519, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -412,8 +445,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.15267888, g: 0.6886792, b: 0.21075849, a: 1}
+  m_Sprite: {fileID: 6086450157361994650, guid: d60d26124a327cd4fa8aa9237c5267a1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -435,7 +468,7 @@ GameObject:
   - component: {fileID: 4756918345879431059}
   - component: {fileID: 4820080165417347644}
   - component: {fileID: 4396953180196681619}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -555,7 +588,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4739552895928465595}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Checks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -590,7 +623,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7555978367138310565}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: ParticleFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -623,7 +656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 136134961757743606}
   - component: {fileID: 4920833701594264509}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -751,7 +784,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6252351558573860745, guid: cb1aa8800186a2648b2587d82d4fe64f, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

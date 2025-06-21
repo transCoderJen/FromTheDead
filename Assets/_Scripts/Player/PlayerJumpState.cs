@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerJumpState : PlayerState
@@ -21,16 +22,21 @@ public class PlayerJumpState : PlayerState
         base.Update();
 
         if (rb.linearVelocity.y < 0)
+        {
             stateMachine.ChangeState(player.fallState);
+        }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (player.playerControls.Player.Attack.triggered)
             stateMachine.ChangeState(player.primaryAttack);
 
         // Reduce upward velocity if space is released
-        if (Input.GetKeyUp(KeyCode.Space) && rb.linearVelocity.y > 0)
+        if (player.playerControls.Player.Jump.WasReleasedThisFrame() && rb.linearVelocity.y > 0)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
+
+        if (player.jumpCount < player.jumpsAllowed && player.playerControls.Player.Jump.triggered)
+            stateMachine.ChangeState(player.jumpState);
     }
 
     public override void FixedUpdate()
@@ -43,4 +49,5 @@ public class PlayerJumpState : PlayerState
         base.Exit();
         CreateTrailAfterImage();
     }
+        
 }
