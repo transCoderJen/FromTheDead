@@ -17,9 +17,25 @@ public class SkillManager : Singleton<SkillManager>
     public ParrySkill parry { get; private set; }
     public LaserSkill laser { get; private set; }
     // public DodgeSkill dodge { get; private set; }
-    public SkillData skill1;
-    public SkillData skill2;
+    public SpellData skill1;
+    public SpellData skill2;
 
+    [Header("Choose Right Click Action")]
+    public bool canUseSword;
+    public bool canUseParry;
+
+    private void Update()
+    {
+        if (canUseSword)
+        {
+            canUseParry = false;
+        }
+        if (canUseParry)
+        {
+            canUseSword = false;
+        }
+    }
+    
     private void Start()
     {
         dash = GetComponent<DashSkill>();
@@ -31,12 +47,12 @@ public class SkillManager : Singleton<SkillManager>
         // crystal = GetComponent<CrystalSkill>();
         parry = GetComponent<ParrySkill>();
         laser = GetComponent<LaserSkill>();
-        
-        
+
+
         // dodge = GetComponent<DodgeSkill>();
     }
 
-    public void AssignSkill(SkillData skillData, SkillSlot slot)
+    public void AssignSkill(SpellData skillData, SkillSlot slot)
     {
         if (slot == SkillSlot.Slot1)
         {

@@ -1,6 +1,6 @@
 public interface ISpell
 {
     bool CanUseSkill(bool useSkill = true);
-    SkillData GetSkillData();
+    SpellData GetSkillData();
     float GetCooldown();
 }

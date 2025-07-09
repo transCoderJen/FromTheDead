@@ -34,14 +34,14 @@ public class PlayerStats : CharacterStats
     public override void DecreaseHealthBy(int _damage)
     {
         base.DecreaseHealthBy(_damage);
-        // TODO Inventory Equipomeny
-        // Inventory inventory = Inventory.instance;
-        // if (inventory.canUseArmor())
-        // {
-        //     ItemData_Equipment armor =inventory.GetEquipment(EquipmentType.Armor);
-        //     if (armor != null)
-        //         armor.Effect(player.transform);
-        // }
+        
+        Inventory inventory = Inventory.instance;
+        if (inventory.canUseArmor())
+        {
+            ItemData_Equipment armor =inventory.GetEquipment(EquipmentType.Armor);
+            if (armor != null)
+                armor.Effect(player.transform);
+        }
     }
 
     public override void OnEvasion()

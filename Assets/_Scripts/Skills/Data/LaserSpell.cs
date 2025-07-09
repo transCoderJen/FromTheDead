@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class LaserSpell : MonoBehaviour, ISpell
 {
-    [SerializeField] private SkillData skillData;
+    [SerializeField] private SpellData skillData;
     public bool CanUseSkill(bool useSkill = true)
     {
         return SkillManager.Instance.laser.CanUseSkill();
@@ -13,7 +13,7 @@ public class LaserSpell : MonoBehaviour, ISpell
         return SkillCooldowns.Instance.laser;
     }
 
-    public SkillData GetSkillData()
+    public SpellData GetSkillData()
     {
         return skillData;
     }

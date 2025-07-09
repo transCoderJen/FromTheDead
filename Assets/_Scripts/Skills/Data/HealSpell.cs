@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class HealSpell : MonoBehaviour, ISpell
 {
-    [SerializeField] private SkillData skillData;
+    [SerializeField] private SpellData skillData;
     public bool CanUseSkill(bool useSkill = true)
     {
         return SkillManager.Instance.heal.CanUseSkill();
@@ -13,7 +13,7 @@ public class HealSpell : MonoBehaviour, ISpell
         return SkillCooldowns.Instance.heal;
     }   
 
-    public SkillData GetSkillData()
+    public SpellData GetSkillData()
     {
         return skillData;
     }

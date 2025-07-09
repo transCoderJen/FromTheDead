@@ -162,16 +162,42 @@ public class SwordSkillController : MonoBehaviour
 
     private void BounceLogic()
     {
-        if (isBouncing && enemyTarget.Count > 0)
+        if (isBouncing && enemyTarget != null && enemyTarget.Count > 0)
         {
+            if (enemyTarget[targetIndex] == null)
+            {
+                Debug.LogError("BounceLogic: enemyTarget[" + targetIndex + "] is null!");
+                return;
+            }
+
+            if (transform == null)
+            {
+                Debug.LogError("BounceLogic: transform is null!");
+                return;
+            }
+
+            if (enemyTarget[targetIndex].position == null)
+            {
+                Debug.LogError("BounceLogic: enemyTarget[" + targetIndex + "].position is null!");
+                return;
+            }
+
             transform.position = Vector2.MoveTowards(transform.position, enemyTarget[targetIndex].position, bounceSpeed * Time.deltaTime);
 
             if (Vector2.Distance(transform.position, enemyTarget[targetIndex].position) < .05f)
-            {
-                // Stop bouncing to wait for the pause duration
+            {   // Stop bouncing to wait for the pause duration
                 isBouncing = false;
                 StartCoroutine(PauseBeforeNextTarget());
             }
+        }
+        else
+        {
+            if (!isBouncing)
+                Debug.Log("BounceLogic: isBouncing is false");
+            if (enemyTarget == null)
+                Debug.LogError("BounceLogic: enemyTarget list is null!");
+            else if (enemyTarget.Count == 0)
+                Debug.Log("BounceLogic: enemyTarget list is empty");
         }
     }
 
@@ -221,15 +247,14 @@ public class SwordSkillController : MonoBehaviour
     {
         player.stats.DoDamage(enemy.GetComponent<CharacterStats>(), knockback);
 
-        //TODO SWORD DAMAGE!
-        // if (player.skill.sword.timeStopUnlocked)
-        // {
-        //     enemy.FreezeTimeFor(freezeTimeDuration);
-        //     if (player.skill.sword.vulnerableUnlocked)
-        //         enemy.stats.makeVulnerable(player.skill.sword.vulnerabilityPercentage, freezeTimeDuration);
-        // }
+        if (player.skill.sword.timeStopUnlocked)
+        {
+            enemy.FreezeTimeFor(freezeTimeDuration);
+            if (player.skill.sword.vulnerableUnlocked)
+                enemy.stats.makeVulnerable(player.skill.sword.vulnerabilityPercentage, freezeTimeDuration);
+        }
 
-        // Inventory.instance.GetEquipment(EquipmentType.Amulet)?.Effect(enemy.transform);
+        Inventory.instance.GetEquipment(EquipmentType.Amulet)?.Effect(enemy.transform);
     }
 
     private void SetupTargetsForBounce(Collider2D collision)

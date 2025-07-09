@@ -40,8 +40,8 @@ public class PlayerAnimationsTriggers : MonoBehaviour
                     AudioManager.Instance.PlaySFX("Player_Attack_2");
                 }
 
-                //TODO WEAPON MODIFIER
-                //Inventory.instance.GetEquipment(EquipmentType.Weapon)?.Effect(_target.transform);
+                
+                Inventory.instance.GetEquipment(EquipmentType.Weapon)?.Effect(_target.transform);
             }
         }
     }
@@ -64,8 +64,8 @@ public class PlayerAnimationsTriggers : MonoBehaviour
                 }
 
                 AudioManager.Instance.PlaySFX("Player_Attack_2");
-                //TODO WEAPON MODIFIER
-                //Inventory.instance.GetEquipment(EquipmentType.Weapon)?.Effect(_target.transform);
+                
+                Inventory.instance.GetEquipment(EquipmentType.Weapon)?.Effect(_target.transform);
             }
         }
     }

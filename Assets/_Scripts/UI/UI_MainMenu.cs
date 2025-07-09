@@ -13,24 +13,41 @@ public class UI_MainMenu : MonoBehaviour
     [Header("Transition Settings")]
     public float fadeDuration = 1.5f;
     public float displayDuration = 1f;
-    public string gameSceneName = "GameScene";
+    [SerializeField] private string gameSceneName = "GameScene";
+    [SerializeField] private GameObject continueButton;
 
     private void Start()
     {
         // Ensure images are hidden at start
         SetImageAlpha(image1, 0f);
         SetImageAlpha(image2, 0f);
+
+        if (SaveManager.instance.HasSavedData())
+            continueButton.SetActive(true);
+        else
+            continueButton.SetActive(false);
     }
 
-    public void OnStartGamePressed()
+    public void OnNewGamePressed()
     {
+        SaveManager.instance.DeleteSavedData();
         introBackground.SetActive(true);
         StartCoroutine(PlayIntroSequence());
+    }
+
+    public void OnContinuePressed()
+    {
+         SceneManager.LoadScene(gameSceneName);
     }
 
     public void OnCreditsPressed()
     {
         SceneManager.LoadScene("Credits");
+    }
+
+    public void OnExitGamePressed()
+    {
+        Application.Quit();
     }
 
     private IEnumerator PlayIntroSequence()

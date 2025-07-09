@@ -60,7 +60,7 @@ public class EntityFX : MonoBehaviour
         burningAudio = gameObject.AddComponent<AudioSource>();
         burningAudio.clip = AudioManager.Instance.getSFXAudioSource("burning").clip;
         burningAudio.outputAudioMixerGroup = soundEffectsGroup;
-        burningAudio.volume = .3f;
+        burningAudio.volume = .5f;
     }
 
 

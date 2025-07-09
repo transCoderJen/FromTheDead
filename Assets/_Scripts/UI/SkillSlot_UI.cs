@@ -1,13 +1,12 @@
+using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class SkillSlot_UI : MonoBehaviour
 {
-    public SkillData skill;
+    public SpellData spell;
     private Image image;
     PlayerControlller playerControls => PlayerManager.Instance.player.playerControls;
     EquipSkillMenu_UI skillMenu_UI => GetComponentInParent<EquipSkillMenu_UI>();
@@ -15,27 +14,32 @@ public class SkillSlot_UI : MonoBehaviour
 
     private void Awake()
     {
-        if (skill == null)
+        if (spell == null)
         {
-            Debug.LogError("Skill is not assigned in SkillSlot_UI!");
+            Debug.LogError("Spell is not assigned in SpellSlot_UI!");
         }
     }
 
     void OnEnable()
     {
         image = GetComponent<Image>();
-        image.sprite = skill.skillSprite;
+        image.sprite = spell.spellSprite;
     }
 
-    public void AssignSkill(SkillData _skill)
+    public void AssignSkill(SpellData _skill)
     {
-        this.skill = _skill;
+        this.spell = _skill;
     }
 
     [ContextMenu("EquipSkill1")]
     public void EquipSkill()
     {
-        UI_InGame.Instance.SetSkill1(skill);
+        UI_InGame.Instance.SetSkill1(spell);
+    }
+
+    public String GetSkillId()
+    {
+        return spell.itemId;
     }
 
     void Update()
@@ -44,8 +48,8 @@ public class SkillSlot_UI : MonoBehaviour
 
         if (isPointerOver)
         {
-            int id = spellMenu_UI.FindSpellIndexByName(skill.name);
-            Debug.Log($"Hovering over: {skill.name} id: {id}");
+            int id = spellMenu_UI.FindSpellIndexByName(spell.name);
+            Debug.Log($"Hovering over: {spell.name} id: {id}");
             spellMenu_UI.UpdateCurrentSelectedSlot(id);
 
 
@@ -59,9 +63,9 @@ public class SkillSlot_UI : MonoBehaviour
 
     private void OnRightClick()
     {
-        Debug.Log($"Right-clicked on skill: {skill.name}");
+        Debug.Log($"Right-clicked on skill: {spell.name}");
         GetComponentInParent<EquipSkillMenu_UI>().EnableMenu();
-        GetComponentInParent<EquipSkillMenu_UI>().SetSkill(skill);
+        GetComponentInParent<EquipSkillMenu_UI>().SetSkill(spell);
     }
     
     private bool IsPointerOverThisUIElement()

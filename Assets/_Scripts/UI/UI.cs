@@ -1,13 +1,19 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class UI : Singleton<UI>
+public class UI : Singleton<UI>, ISaveManager
 {
     private PlayerControlller playerControls;
     [SerializeField] private GameObject inGame;
     [SerializeField] private GameObject characterMenu;
     [SerializeField] private EquipSkillMenu_UI equipSkillMenu;
     [SerializeField] private AudioMixer audioMixer;
+    [SerializeField] private UI_VolumeSlider[] volumeSettings;
+
+    public UI_StatTooltip statTooltip;
+    public UI_ItemTooltip itemTooltip;
+    
 
     private bool menuOpened = false;
     private bool showPopupText = true;
@@ -15,6 +21,7 @@ public class UI : Singleton<UI>
     void Start()
     {
         playerControls = PlayerManager.Instance.player.playerControls;
+        statTooltip.gameObject.SetActive(false);
     }
 
 
@@ -68,5 +75,34 @@ public class UI : Singleton<UI>
     public bool IsPopupTextEnabled()
     {
         return showPopupText;
+    }
+
+    public void LoadData(GameData _data)
+    {
+        Debug.Log("Loading volume settings...");
+        foreach (KeyValuePair<string, float> pair in _data.volumeSettings)
+        {
+            foreach (UI_VolumeSlider item in volumeSettings)
+            {
+                if (item.parameter == pair.Key)
+                    item.LoadSlider(pair.Value);
+            }
+        }
+
+        showPopupText = _data.showPopupText;
+        Debug.Log("ShowPopupText loaded as: " + showPopupText);
+    }
+
+    public void SaveData(ref GameData _data)
+    {
+        _data.volumeSettings.Clear();
+
+        foreach (UI_VolumeSlider item in volumeSettings)
+        {
+            _data.volumeSettings.Add(item.parameter, item.slider.value);
+        }
+
+        _data.showPopupText = showPopupText;
+        Debug.Log("ShowPopupText saved as: " + showPopupText);
     }
 }

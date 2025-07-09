@@ -31,20 +31,20 @@ public class PlayerGroundedState : PlayerState
             // player.fx.CreateDustParticles(DustParticleType.Jump);
         }
 
-        if(Input.GetKeyDown(KeyCode.Mouse1) && HasNoSword())
+        if(player.playerControls.Player.Counter.triggered && HasNoSword() && SkillManager.Instance.canUseSword)
             stateMachine.ChangeState(player.aimSword);
 
-        // if (player.playerControls.Player.Counter.triggered && SkillManager.Instance.parry.CanUseSkill())
-        //     stateMachine.ChangeState(player.counterAttack);
+        if (player.playerControls.Player.Counter.triggered && SkillManager.Instance.parry.CanUseSkill() && SkillManager.Instance.canUseParry)
+            stateMachine.ChangeState(player.counterAttack);
 
         if (player.playerControls.Player.Attack.triggered)
             stateMachine.ChangeState(player.primaryAttack);
 
         if (player.playerControls.Player.Spell1.triggered)
-            SkillManager.Instance.skill1.skillPrefab.GetComponent<ISpell>().CanUseSkill();
+            SkillManager.Instance.skill1.spellPrefab.GetComponent<ISpell>().CanUseSkill();
 
         if (player.playerControls.Player.Spell2.triggered)
-            SkillManager.Instance.skill2.skillPrefab.GetComponent<ISpell>().CanUseSkill();
+            SkillManager.Instance.skill2.spellPrefab.GetComponent<ISpell>().CanUseSkill();
 
         if (Input.GetKeyDown(KeyCode.T))
         {

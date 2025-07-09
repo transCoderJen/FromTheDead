@@ -134,12 +134,12 @@ public class SpellMenu_UI : MonoBehaviour
 
     private void UpdateSkillInfoText()
     {
-        if (skillSlots[currentSelectedSlot] == null || skillSlots[currentSelectedSlot].skill == null)
+        if (skillSlots[currentSelectedSlot] == null || skillSlots[currentSelectedSlot].spell == null)
             return;
 
-        spellName.text = skillSlots[currentSelectedSlot].skill.name;
-        spellInfo.text = skillSlots[currentSelectedSlot].skill.description;
-        spellCooldown.text = "Cooldown: " + skillSlots[currentSelectedSlot].skill.cooldown.ToString();
+        spellName.text = skillSlots[currentSelectedSlot].spell.name;
+        spellInfo.text = skillSlots[currentSelectedSlot].spell.description;
+        spellCooldown.text = "Cooldown: " + skillSlots[currentSelectedSlot].spell.cooldown.ToString();
     }
 
     private void UpdateSkillSlotSelection()
@@ -161,17 +161,17 @@ public class SpellMenu_UI : MonoBehaviour
 
     public void OnSelect()
     {
-        if (!isFocused || skillSlots[0].skill == null)
+        if (!isFocused || skillSlots[0].spell == null)
             return;
         contextMenu.EnableMenu(fromMouseClick: false, skillSlots[currentSelectedSlot].gameObject.transform);
-        contextMenu.SetSkill(skillSlots[currentSelectedSlot].skill);
+        contextMenu.SetSkill(skillSlots[currentSelectedSlot].spell);
     }
 
     public int FindSpellIndexByName(string spellName)
     {
         for (int i = 0; i < skillSlots.Length; i++)
         {
-            if (skillSlots[i].skill != null && skillSlots[i].skill.name.Equals(spellName, StringComparison.OrdinalIgnoreCase))
+            if (skillSlots[i].spell != null && skillSlots[i].spell.name.Equals(spellName, StringComparison.OrdinalIgnoreCase))
             {
                 return i;
             }

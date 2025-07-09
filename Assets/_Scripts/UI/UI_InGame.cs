@@ -23,8 +23,8 @@ public class UI_InGame : Singleton<UI_InGame>
     [SerializeField] private Image cooldownImageSkill2;
 
     [Header("Skillls")]
-    [SerializeField] private SkillData skill1;
-    [SerializeField] private SkillData skill2;
+    [SerializeField] private SpellData skill1;
+    [SerializeField] private SpellData skill2;
 
     private PlayerStats playerStats;
     private SkillManager skills;
@@ -43,19 +43,19 @@ public class UI_InGame : Singleton<UI_InGame>
         
     }
 
-    public void SetSkill1(SkillData _skill)
+    public void SetSkill1(SpellData _skill)
     {
         skill1 = _skill;
-        skill1Image.sprite = skill1.skillSprite;
-        cooldownImageSkill1.sprite = skill1.skillSprite;
+        skill1Image.sprite = skill1.spellSprite;
+        cooldownImageSkill1.sprite = skill1.spellSprite;
         SkillManager.Instance.AssignSkill(skill1, SkillSlot.Slot1);
     }
 
-    public void SetSkill2(SkillData _skill)
+    public void SetSkill2(SpellData _skill)
     {
         skill2 = _skill;
-        skill2Image.sprite = skill2.skillSprite;
-        cooldownImageSkill2.sprite = skill2.skillSprite;
+        skill2Image.sprite = skill2.spellSprite;
+        cooldownImageSkill2.sprite = skill2.spellSprite;
         SkillManager.Instance.AssignSkill(skill2, SkillSlot.Slot2);
     }
 
@@ -90,8 +90,8 @@ public class UI_InGame : Singleton<UI_InGame>
 
         CheckCooldownOf(parryImage, skills.parry.cooldown);    
         CheckCooldownOf(dashImage, skills.dash.cooldown);
-        CheckCooldownOf(cooldownImageSkill2, skill2.skillPrefab.GetComponent<ISpell>().GetCooldown());    
-        CheckCooldownOf(cooldownImageSkill1, skill1.skillPrefab.GetComponent<ISpell>().GetCooldown());
+        CheckCooldownOf(cooldownImageSkill2, skill2.spellPrefab.GetComponent<ISpell>().GetCooldown());    
+        CheckCooldownOf(cooldownImageSkill1, skill1.spellPrefab.GetComponent<ISpell>().GetCooldown());
     }
 
     private IEnumerator WaitForGameOver()

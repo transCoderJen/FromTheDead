@@ -32,8 +32,6 @@ public class PlayerDashState : PlayerState
     public override void Enter()
     {
         base.Enter();
-        //TODO player.stats.MakeInvincible(true); // Make the player invincible during the dash
-
         // Create dust particles if the player is on the ground
 
         player.sr.material = player.dashMat; // Change the player's material to the dash material
@@ -52,7 +50,7 @@ public class PlayerDashState : PlayerState
         player.ResetMaterial();
         player.stats.MakeInvincible(true);
 
-        // TODO // Ignore collisions between the player and enemies during the dash
+        // TODO Ignore collisions between the player and enemies during the dash
         Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Enemy"), true);
     }
 
@@ -63,7 +61,6 @@ public class PlayerDashState : PlayerState
     /// </summary>
     public override void Exit()
     {
-        //TODO player.stats.MakeInvincible(false); // Remove invincibility after the dash
         if (!jumpingOut)
         {
             player.SetVelocity(0, rb.linearVelocity.y); // Stop horizontal movement but retain vertical velocity

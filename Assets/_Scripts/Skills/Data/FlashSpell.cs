@@ -1,8 +1,9 @@
+using UnityEditor;
 using UnityEngine;
 
 public class FlashSpell : MonoBehaviour, ISpell
 {
-    [SerializeField] private SkillData skillData;
+    [SerializeField] private SpellData skillData;
     public bool CanUseSkill(bool useSkill = true)
     {
         return SkillManager.Instance.flash.CanUseSkill();
@@ -13,7 +14,7 @@ public class FlashSpell : MonoBehaviour, ISpell
         return SkillCooldowns.Instance.flash;
     }
 
-    public SkillData GetSkillData()
+    public SpellData GetSkillData()
     {
         return skillData;
     }

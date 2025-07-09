@@ -5,6 +5,7 @@ public class Checkpoint : MonoBehaviour
 {
     private Animator anim;
     public string id;
+    public string checkpointName;
     public bool activated;
     [SerializeField] private Material checkpointMat;
     private PulseIntensity pulseIntensity;
@@ -32,7 +33,6 @@ public class Checkpoint : MonoBehaviour
 
     public void ActivateCheckpoint()
     {
-        // TODO Checkpint SFX
         AudioManager.Instance.PlaySFX("Checkpoint");
         PlayerManager.Instance.player.respawnPosition = transform;
         PlayerManager.Instance.player.stats.IncreaseHealthBy(1000);

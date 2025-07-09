@@ -302,7 +302,7 @@ MonoBehaviour:
   igniteFx: {fileID: 7735285075534646955}
   chillFx: {fileID: 0}
   shockFx: {fileID: 0}
-  soundEffectsGroup: {fileID: 0}
+  soundEffectsGroup: {fileID: -162871148249835417, guid: 1d72ac3c440e88045a3bae53c0335461, type: 2}
   hitFxPrefab: {fileID: 1317785407803777038, guid: 75123df1d8a17fe44ad74e20c87c9d8d, type: 3}
   critHitFxPrefab: {fileID: 1317785407803777038, guid: 75123df1d8a17fe44ad74e20c87c9d8d, type: 3}
   runningdDustFx: {fileID: 0}

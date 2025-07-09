@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class SkillCooldowns : Singleton<SkillCooldowns>
 {
-    [SerializeField] private SkillData flashSkillData;
-    [SerializeField] private SkillData laserSkill;
-    [SerializeField] private SkillData healSkill;
+    [SerializeField] private SpellData flashSkillData;
+    [SerializeField] private SpellData laserSkill;
+    [SerializeField] private SpellData healSkill;
     [HideInInspector] public float flash;
     [HideInInspector] public float dash = 3f;
     [HideInInspector] public float heal;

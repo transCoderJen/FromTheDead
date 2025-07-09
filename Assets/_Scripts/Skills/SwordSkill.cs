@@ -11,6 +11,7 @@ public enum SwordType
 public class SwordSkill : Skill
 {
 
+    public bool swordEquipped;
     public SwordType swordType = SwordType.Regular;
 
     [Header("Bounce Info")]

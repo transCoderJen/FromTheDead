@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class EquipSkillMenu_UI : MonoBehaviour
 {
     [SerializeField] private GameObject equipMenu;
-    private SkillData skill;
+    private SpellData skill;
     [SerializeField] Button buttonToHighlightByDefault;
 
     public void EnableMenu(bool fromMouseClick = true, Transform menuSpawnTransform = null)
@@ -44,7 +44,7 @@ public class EquipSkillMenu_UI : MonoBehaviour
         return !equipMenu.activeSelf;
     }
 
-    public void SetSkill(SkillData _skill)
+    public void SetSkill(SpellData _skill)
     {
         this.skill = _skill;
     }
