@@ -23,6 +23,14 @@ public class SpellInventory : Singleton<SpellInventory>, ISaveManager
         Debug.Log("Adding skill to inventory: " + skillData.name);
         foreach (SkillSlot_UI skillSlot in skillSlots)
         {
+            if (skillSlot.spell != null && skillSlot.spell.itemId == skillData.itemId)
+            {
+                Debug.Log("Skill already in inventory: " + skillData.name);
+                return;
+            }
+        }
+        foreach (SkillSlot_UI skillSlot in skillSlots)
+        {
             if (!skillSlot.gameObject.activeSelf)
             {
                 if (skillSlot.transform.parent != null)
