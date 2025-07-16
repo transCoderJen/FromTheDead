@@ -9,14 +9,14 @@ public class EnemyAnimationTriggers : MonoBehaviour
     private void AnimationTrigger() { enemy.AnimationTrigger(); }
     private void ProjectileTrigger()
     {
-        enemy.ProjectileTrigger();        
+        enemy.ProjectileTrigger();
     }
 
     private void AttackTrigger()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(enemy.attackCheck.position, enemy.attackCheckRadius);
 
-        foreach(var hit in colliders)
+        foreach (var hit in colliders)
         {
             if (hit.GetComponent<Player>() != null)
             {
@@ -27,4 +27,9 @@ public class EnemyAnimationTriggers : MonoBehaviour
 
     private void OpenCounterWindow() => enemy.OpenCounterAttackWindow();
     private void CloseCounterWindow() => enemy.CloseCounterAttackWindow();
+
+    private void SpawnSlimes()
+    {
+        (enemy as EnemySlime).SpawnClones();
+    }
 }

@@ -9,6 +9,7 @@ public class GameData
     public SerializableDictionary<string, bool> skillTree;
     public SerializableDictionary<string, int> inventory;
     public List<string> spells;
+    public List<string> equippedSpells;
     public List<string> equipmentId;
 
 
@@ -33,6 +34,7 @@ public class GameData
         skillTree = new SerializableDictionary<string, bool>();
         inventory = new SerializableDictionary<string, int>();
         spells = new List<string>();
+        equippedSpells = new List<string>();
         equipmentId = new List<string>();
 
         lastCheckpointId = string.Empty;

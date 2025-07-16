@@ -6,7 +6,7 @@ using UnityEngine.InputSystem.Interactions;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class UI_InGame : Singleton<UI_InGame>
+public class UI_InGame : Singleton<UI_InGame>, ISaveManager
 {
     [Header("UI Elements")]
     [SerializeField] private Slider slider;
@@ -38,9 +38,11 @@ public class UI_InGame : Singleton<UI_InGame>
             playerStats.onHealthChanged += UpdateHealthUI;
         player = PlayerManager.Instance.player;
 
-        SetSkill1(skill1);
-        SetSkill2(skill2);
-        
+        if (!SaveManager.instance.HasSavedData())
+        {
+            SetSkill1(skill1);
+            SetSkill2(skill2);
+        }
     }
 
     public void SetSkill1(SpellData _skill)
@@ -135,5 +137,30 @@ public class UI_InGame : Singleton<UI_InGame>
     {
         if (_image.fillAmount > 0)
             _image.fillAmount -= 1 / _cooldown * Time.deltaTime;
+    }
+
+    public void LoadData(GameData _data)
+    {
+        if (_data.equippedSpells.Count < 2)
+        {
+            return;
+        }
+        
+        foreach (var spell in Inventory.instance.spellDataBase)
+        {
+            if (spell != null && spell.itemId == _data.equippedSpells[0])
+                SetSkill1(spell as SpellData);
+            else if (spell != null && spell.itemId == _data.equippedSpells[1])
+                SetSkill2(spell as SpellData);
+        }
+    }
+
+    public void SaveData(ref GameData _data)
+    {
+        _data.equippedSpells.Clear();
+        if (skill1 != null)
+            _data.equippedSpells.Add(skill1.itemId);
+        if (skill2 != null)
+            _data.equippedSpells.Add(skill2.itemId);
     }
 }

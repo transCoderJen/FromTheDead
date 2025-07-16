@@ -1,0 +1,79 @@
+!. 2024-01-04 
+
+Slime v1.1
+
+01. Contrast UP.
+
+02. Add three more animations (dash attack, turn, death2)
+
+03. Optimizing some animations.
+
+
+- I raised the price by a dollar(2USD -> 3USD). I will continue to make pixel work, so please understand. 
+
+thank you!
+
+
+
+
+!. 2025-05-26
+
+Slime 2.1v
+
+
+01. The pixel art has been polished for smoother overall animation, with frame counts increased or reduced where necessary. Resource naming has also been improved for clarity and consistency.
+
+- Stand by : 12 frames   ->   Lurk : 12 frames
+
+- Appearance : 13 frames   ->   PopOut : 15 frames
+
+- Idle : 12 frames   ->   Idle : 14 frames
+
+- Move : 7 frames   ->   Move : 11 frames
+
+- Turn : 7 frames   ->   Turn : 7 frames
+
+- Attack01 : 8 frames    ->   Attack01 : 13 frames
+
+- Attack02 : 18 frames   ->   Attack02 : 24 frames
+
+- Attack03 : 33 frames   ->   Attack03 : 41 frames 
+
+- Attack03_Loop : 6 frames​ 
+
+- Hit : 3frames
+
+- Stun :  9 frames   ->   Stun : 8 frames
+
+- Death01 : 24frames
+
+- Death02 : 8frames
+
+- Effect_HitV1 : 8 frames (38x20)
+
+- Effect_HitV2 : 11 frames (74x58)
+
+- Effect_HitV3 : 7 frames (20x18) 
+
+- Updated resource naming conventions — for example, Slime_v1_Appearance_1 was renamed to SlimeV1_PopOut_01.
+
+
+
+02. Added 2 new color variations. 
+
+-Red, Blue Added
+
+
+
+03. Added 4 new animations.
+
+- Attack03_Loop : 6 frames
+
+- Effect_HitV1 : 8 frames (38x20)
+
+- Effect_HitV2 : 11 frames (74x58)
+
+- Effect_HitV3 : 7 frames (20x18)  
+
+
+Due to development costs and improvements, the price will be adjusted from $3 to $4. Thank you for your understanding and support!

@@ -16,8 +16,7 @@ public enum DustParticleType
     Landing
 }
 public class EntityFX : MonoBehaviour
-{
-    
+{ 
     [Header("Pop Up Text")]
     [SerializeField] private GameObject popUpTextPrefab;
 
@@ -25,7 +24,7 @@ public class EntityFX : MonoBehaviour
     [SerializeField] private Material hitMat;
     [SerializeField] private float flashDuration;
     [SerializeField] private int flashCount;
-    private Material originalMat;
+    public Material originalMat;
 
     [Header("Ailment Colors")]
     [SerializeField] private Color chillColor;
@@ -117,7 +116,7 @@ public class EntityFX : MonoBehaviour
                 sr.material = hitMat;
             }
 
-        yield return new WaitForSeconds(flashDuration);
+            yield return new WaitForSeconds(flashDuration);
 
             foreach (SpriteRenderer sr in srs)
             {
